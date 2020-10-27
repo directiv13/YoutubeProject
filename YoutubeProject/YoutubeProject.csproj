@@ -53,6 +53,7 @@
     <Compile Include="EnterForm.Designer.cs">
       <DependentUpon>EnterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IScrapper.cs" />
     <Compile Include="LogInControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,6 +80,7 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="YoutubeSearch.cs" />
     <EmbeddedResource Include="EnterForm.resx">
       <DependentUpon>EnterForm.cs</DependentUpon>
     </EmbeddedResource>
