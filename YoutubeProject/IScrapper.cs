@@ -8,7 +8,10 @@ namespace YoutubeProject
 {
     interface IScrapper
     {
-        List<string> GetYoutubeVideos(HttpRequest requ);
-        string MakeSearch(string searchRequset);
+        List<string> GetThumbnails(string htmlQuery);
+        List<string> GetTitles(string htmlQuery);
+        List<string> GetVideoId(string htmlQuery);
+        string GetSearchResult(string searchRequset);
+
     }
 }
