@@ -68,11 +68,21 @@ namespace YoutubeProject
             }
         }
 
-        public List<string> GetTitles(string htmlQuery)
+        public List<string> GetTitles(string json)
         {
             try 
             {
-                return null;
+                var jObject = JObject.Parse(json);
+
+                var contents = jObject.SelectToken("$.contents.twoColumnSearchResultsRenderer.primaryContents.sectionListRenderer.contents[0].itemSectionRenderer.contents[0]");
+
+                List<string> titles = new List<string>(6);
+                for (int i = 0; i < 6; i++)
+                {
+                    titles.Add(contents.SelectToken("$.videoRenderer.title.runs[0].text").Value<string>());
+                    contents = contents.Next;
+                }
+                return titles;
             }
             catch (Exception ex)
             {
@@ -81,11 +91,21 @@ namespace YoutubeProject
             }  
         }
 
-        public List<string> GetVideoId(string htmlQuery)
+        public List<string> GetVideoId(string json)
         {
             try
             {
-                return null;
+                var jObject = JObject.Parse(json);
+
+                var contents = jObject.SelectToken("$.contents.twoColumnSearchResultsRenderer.primaryContents.sectionListRenderer.contents[0].itemSectionRenderer.contents[0]");
+
+                List<string> videoIds = new List<string>(6);
+                for (int i = 0; i < 6; i++)
+                {
+                    videoIds.Add(contents.SelectToken("$.videoRenderer.videoId").Value<string>());
+                    contents = contents.Next;
+                }
+                return videoIds;
             }
             catch (Exception ex)
             {
