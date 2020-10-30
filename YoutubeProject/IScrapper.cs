@@ -11,7 +11,7 @@ namespace YoutubeProject
         List<string> GetThumbnails(string htmlQuery);
         List<string> GetTitles(string htmlQuery);
         List<string> GetVideoId(string htmlQuery);
-        string GetSearchResult(string searchRequset);
+        string GetSearchResult(string searchRequest);
 
     }
 }

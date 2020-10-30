@@ -29,7 +29,7 @@ namespace YoutubeProject
 
         private void Mouse_Enter(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.FromArgb(0,194, 197, 209);
+            ((Button)sender).BackColor = Color.FromArgb(0, 194, 197, 209);
         }
 
         private void Mouse_Leave(object sender, EventArgs e)
@@ -45,6 +45,14 @@ namespace YoutubeProject
         private void searchText_KeyDown(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            searchResult1.SearchRequest = searchText.Text;
+            searchResult1.ShowResult();
+            searchResult1.Visible = true;
+            searchResult1.BringToFront();
         }
     }
 }
