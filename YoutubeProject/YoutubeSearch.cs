@@ -13,14 +13,14 @@ namespace YoutubeProject
 {
     class YoutubeSearch
     {
-        public string GetSearchResult(string searchRequest)
+        public async Task<string> GetSearchResult(string searchRequest)
         {
             try
             {
                 String htmlQuery;
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://www.youtube.com/results?search_query=" + searchRequest);
-                using (var response = request.GetResponseAsync())
+                using (var response = await request.GetResponseAsync())
                 {
                     using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                         htmlQuery = reader.ReadToEnd();
@@ -45,9 +45,9 @@ namespace YoutubeProject
             }
         }
 
-        public JToken GetContents(string searchRequest)
+        public async Task<JToken> GetContents(string searchRequest)
         {
-            string searchResult = GetSearchResult(searchRequest);
+            string searchResult = await GetSearchResult(searchRequest);
 
             var jObject = JObject.Parse(searchResult);
             var contents = jObject.SelectToken("$.contents.twoColumnSearchResultsRenderer.primaryContents.sectionListRenderer.contents[0].itemSectionRenderer.contents");

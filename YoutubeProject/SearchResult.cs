@@ -111,10 +111,10 @@ namespace YoutubeProject
                 }
             }
         }
-        public void ShowResult()
+        public async Task ShowResult()
         {
             youtubeVideos.Clear();
-            JToken contents = search.GetContents(StringToUtf8(SearchRequest));
+            JToken contents = await search.GetContents(StringToUtf8(SearchRequest));
             if (contents == null)
             {
                 this.Visible = false;

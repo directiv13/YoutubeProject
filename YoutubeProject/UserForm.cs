@@ -47,10 +47,10 @@ namespace YoutubeProject
 
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private async void searchButton_Click(object sender, EventArgs e)
         {
             searchResult1.SearchRequest = searchText.Text;
-            searchResult1.ShowResult();
+            await searchResult1.ShowResult();
             searchResult1.BringToFront();
         }
 
