@@ -223,9 +223,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="YoutubeDownloader.cs" />
     <Compile Include="YoutubeSearch.cs" />
     <Compile Include="YoutubeVideo.cs" />
+    <Compile Include="YoutubeVideoBuilder.cs" />
     <EmbeddedResource Include="EnterForm.resx">
       <DependentUpon>EnterForm.cs</DependentUpon>
     </EmbeddedResource>

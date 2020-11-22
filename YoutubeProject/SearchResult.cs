@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace YoutubeProject
 {
@@ -89,7 +90,6 @@ namespace YoutubeProject
         {
             InitializeComponent();
         }
-
         private void buttonMP3_click(object sender, EventArgs e)
         {
 
@@ -113,7 +113,28 @@ namespace YoutubeProject
         }
         public void ShowResult()
         {
-            youtubeVideos = search.GetYoutubeVideos(StringToUtf8(SearchRequest));
+            youtubeVideos.Clear();
+            JToken contents = search.GetContents(StringToUtf8(SearchRequest));
+            if (contents == null)
+            {
+                this.Visible = false;
+                MessageBox.Show("Invalid search request.");
+                return;
+            }
+
+            YoutubeVideoBuilder builder = new YoutubeVideoBuilder(contents);
+            for(int i = 0; i < 6; i++)
+            {
+                try
+                {
+                    youtubeVideos.Add(builder.GetYoutubeVideo());
+                }
+                catch(NullReferenceException ne)
+                {
+                    MessageBox.Show(ne.Message);
+                    return;
+                }
+            }
 
             for (int i = 0; i < youtubeVideos.Count() && i < 6; i++)
             {
@@ -121,17 +142,23 @@ namespace YoutubeProject
                 this.pictureBoxCollection[i].ImageLocation = youtubeVideos[i].ThumbnailURL;
                 //get title
                 this.titleBoxCollection[i].Text = youtubeVideos[i].Title;
+                //get channel name
                 this.channelNameCollection[i].Text = youtubeVideos[i].ChannelName;
+                //get viewCount
                 this.viewCountCollection[i].Text = youtubeVideos[i].ViewCount;
+                //get published time
                 this.publishedTimeCollection[i].Text = youtubeVideos[i].PublishedTime;
+                //get duration
                 this.durationCollection[i].Text = youtubeVideos[i].Duration;
             }
+            this.Visible = true;
         }
         private void SearchResult_Load(object sender, EventArgs e)
         {
             foreach (var pictureBox in pictureBoxCollection)
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             search = new YoutubeSearch();
+            youtubeVideos = new List<YoutubeVideo>();
         }
         private void buttonMP4_click(object sender, EventArgs e)
         {

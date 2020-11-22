@@ -19,7 +19,7 @@ namespace YoutubeProject
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-
+            searchResult1.Visible = false;
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)
@@ -51,8 +51,17 @@ namespace YoutubeProject
         {
             searchResult1.SearchRequest = searchText.Text;
             searchResult1.ShowResult();
-            searchResult1.Visible = true;
             searchResult1.BringToFront();
+        }
+
+        private void searchText_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    searchButton_Click(searchText, null);
+                    break;
+            }
         }
     }
 }
