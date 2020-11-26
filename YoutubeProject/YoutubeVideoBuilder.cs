@@ -34,26 +34,27 @@ namespace YoutubeProject
             return false;
         }
 
-        public YoutubeVideo GetYoutubeVideo()
+        public YoutubeVideo CreateYoutubeVideo()
         {
-            JToken token = contents.SelectToken("$.videoRenderer.publishedTimeText");
+            JToken token = contents.SelectToken("$.videoRenderer.lengthText");
             //Відкидаємо прямі трансляції
             while (token == null)
             {
                 if (NextVideo())
                 {
-                    token = contents.SelectToken("$.videoRenderer.publishedTimeText");
+                    token = contents.SelectToken("$.videoRenderer.lengthText");
                 }
                 else
-                    break;
+                    return null;
             }
+
             this.thumbnail = contents.SelectToken("$.videoRenderer.thumbnail.thumbnails[0].url").Value<string>();
             this.videoID = contents.SelectToken("$.videoRenderer.videoId").Value<string>();
             this.title = contents.SelectToken("$.videoRenderer.title.runs[0].text").Value<string>();
-            this.duration = contents.SelectToken("$.videoRenderer.lengthText.simpleText").Value<string>();
+            this.duration = token.SelectToken("$.simpleText").Value<string>();
             this.viewCount = contents.SelectToken("$.videoRenderer.shortViewCountText.simpleText").Value<string>();
             this.channelName = contents.SelectToken("$.videoRenderer.ownerText.runs[0].text").Value<string>();
-            this.publishedTime = token.SelectToken("$.simpleText").Value<string>();
+            this.publishedTime = contents.SelectToken("$.videoRenderer.publishedTimeText.simpleText").Value<string>();
             //Переходимо до наступного відео у пошуку
             NextVideo();
             return new YoutubeVideo(videoID)

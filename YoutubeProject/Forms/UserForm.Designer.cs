@@ -37,8 +37,8 @@
             this.historyButton = new System.Windows.Forms.Button();
             this.profileButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
-            this.searchText = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.infoTextBox = new System.Windows.Forms.TextBox();
+            this.searchText = new YoutubeProject.PlaceHolderTextBox();
             this.searchResult1 = new YoutubeProject.SearchResult();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +68,7 @@
             this.collapseButton.Size = new System.Drawing.Size(20, 20);
             this.collapseButton.TabIndex = 2;
             this.collapseButton.UseVisualStyleBackColor = true;
+            this.collapseButton.Click += new System.EventHandler(this.collapseButton_Click);
             // 
             // closeButton
             // 
@@ -151,47 +152,49 @@
             this.searchButton.FlatAppearance.BorderSize = 0;
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.Image = ((System.Drawing.Image)(resources.GetObject("searchButton.Image")));
-            this.searchButton.Location = new System.Drawing.Point(1179, 66);
+            this.searchButton.Location = new System.Drawing.Point(1175, 65);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(32, 32);
+            this.searchButton.Size = new System.Drawing.Size(38, 32);
             this.searchButton.TabIndex = 51;
             this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // infoTextBox
+            // 
+            this.infoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.infoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.infoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.infoTextBox.Location = new System.Drawing.Point(586, 321);
+            this.infoTextBox.Multiline = true;
+            this.infoTextBox.Name = "infoTextBox";
+            this.infoTextBox.ReadOnly = true;
+            this.infoTextBox.Size = new System.Drawing.Size(694, 67);
+            this.infoTextBox.TabIndex = 52;
+            this.infoTextBox.Text = "Enter the search text to find and download \r\nhigh-quality videos from YouTube";
+            this.infoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // searchText
             // 
             this.searchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
             this.searchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.searchText.Location = new System.Drawing.Point(567, 58);
+            this.searchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.searchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.searchText.Location = new System.Drawing.Point(561, 64);
             this.searchText.Margin = new System.Windows.Forms.Padding(2);
             this.searchText.Name = "searchText";
-            this.searchText.Size = new System.Drawing.Size(667, 48);
-            this.searchText.TabIndex = 50;
-            this.searchText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchText_KeyDown);
+            this.searchText.PlaceHolderText = "Enter a search request here...";
+            this.searchText.Size = new System.Drawing.Size(667, 34);
+            this.searchText.TabIndex = 54;
+            this.searchText.Text = "Enter a search request here...";
             this.searchText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchText_KeyUp);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(586, 321);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(694, 67);
-            this.textBox1.TabIndex = 52;
-            this.textBox1.Text = "Enter the search text to find and download \r\nhigh-quality videos from YouTube";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // searchResult1
             // 
-            this.searchResult1.Location = new System.Drawing.Point(197, 158);
-            this.searchResult1.Margin = new System.Windows.Forms.Padding(2);
+            this.searchResult1.Location = new System.Drawing.Point(214, 163);
+            this.searchResult1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchResult1.Name = "searchResult1";
             this.searchResult1.SearchRequest = null;
-            this.searchResult1.Size = new System.Drawing.Size(1083, 547);
+            this.searchResult1.Size = new System.Drawing.Size(1066, 542);
             this.searchResult1.TabIndex = 53;
             // 
             // UserForm
@@ -200,15 +203,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.searchResult1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.infoTextBox);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.searchText);
             this.Controls.Add(this.profileButton);
             this.Controls.Add(this.historyButton);
             this.Controls.Add(this.homeButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.searchText);
+            this.Controls.Add(this.searchResult1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserForm";
@@ -232,8 +235,8 @@
         private System.Windows.Forms.Button historyButton;
         private System.Windows.Forms.Button profileButton;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.TextBox searchText;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox infoTextBox;
         private SearchResult searchResult1;
+        private PlaceHolderTextBox searchText;
     }
 }

@@ -17,9 +17,5 @@ namespace YoutubeProject
             InitializeComponent();
         }
 
-        private void Mouse_click(object sender, EventArgs e)
-        {
-            ((TextBox)sender).Text = string.Empty;
-        }
     }
 }

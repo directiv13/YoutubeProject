@@ -11,16 +11,16 @@ using Newtonsoft.Json.Linq;
 
 namespace YoutubeProject
 {
-    class YoutubeSearch
+    class YoutubeSearch:IScrapper
     {
-        public async Task<string> GetSearchResult(string searchRequest)
+        public string GetSearchResult(string searchRequest)
         {
             try
             {
                 String htmlQuery;
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://www.youtube.com/results?search_query=" + searchRequest);
-                using (var response = await request.GetResponseAsync())
+                using (var response = request.GetResponse())
                 {
                     using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                         htmlQuery = reader.ReadToEnd();
@@ -44,10 +44,9 @@ namespace YoutubeProject
                 return null;
             }
         }
-
-        public async Task<JToken> GetContents(string searchRequest)
+        public JToken GetContents(string searchRequest)
         {
-            string searchResult = await GetSearchResult(searchRequest);
+            string searchResult = GetSearchResult(searchRequest);
 
             var jObject = JObject.Parse(searchResult);
             var contents = jObject.SelectToken("$.contents.twoColumnSearchResultsRenderer.primaryContents.sectionListRenderer.contents[0].itemSectionRenderer.contents");

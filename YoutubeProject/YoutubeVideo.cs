@@ -9,7 +9,7 @@ using VideoLibrary;
 
 namespace YoutubeProject
 {
-    class YoutubeVideo
+    public class YoutubeVideo
     {
         public string ThumbnailURL { get; set; }
         public string VideoID { get; set; }
@@ -22,7 +22,7 @@ namespace YoutubeProject
         {
             this.VideoID = videoID;
         }
-        public async void Download(DownloadingFormat format, string folderPath)
+        public async Task DownloadAsync(DownloadingFormat format, string folderPath)
         {
             try
             {

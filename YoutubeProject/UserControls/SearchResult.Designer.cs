@@ -88,12 +88,13 @@
             // 
             // pictureBox0
             // 
-            this.pictureBox0.Location = new System.Drawing.Point(45, 2);
-            this.pictureBox0.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox0.Location = new System.Drawing.Point(60, 2);
+            this.pictureBox0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox0.Name = "pictureBox0";
-            this.pictureBox0.Size = new System.Drawing.Size(258, 145);
+            this.pictureBox0.Size = new System.Drawing.Size(344, 178);
             this.pictureBox0.TabIndex = 8;
             this.pictureBox0.TabStop = false;
+            this.pictureBox0.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // audioButton0
             // 
@@ -104,10 +105,10 @@
             this.audioButton0.ForeColor = System.Drawing.Color.White;
             this.audioButton0.Image = ((System.Drawing.Image)(resources.GetObject("audioButton0.Image")));
             this.audioButton0.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.audioButton0.Location = new System.Drawing.Point(45, 147);
-            this.audioButton0.Margin = new System.Windows.Forms.Padding(2);
+            this.audioButton0.Location = new System.Drawing.Point(60, 181);
+            this.audioButton0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.audioButton0.Name = "audioButton0";
-            this.audioButton0.Size = new System.Drawing.Size(129, 40);
+            this.audioButton0.Size = new System.Drawing.Size(172, 49);
             this.audioButton0.TabIndex = 6;
             this.audioButton0.Text = "MP3";
             this.audioButton0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,10 +125,10 @@
             this.videoButton0.ForeColor = System.Drawing.Color.White;
             this.videoButton0.Image = ((System.Drawing.Image)(resources.GetObject("videoButton0.Image")));
             this.videoButton0.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.videoButton0.Location = new System.Drawing.Point(174, 147);
-            this.videoButton0.Margin = new System.Windows.Forms.Padding(2);
+            this.videoButton0.Location = new System.Drawing.Point(232, 181);
+            this.videoButton0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.videoButton0.Name = "videoButton0";
-            this.videoButton0.Size = new System.Drawing.Size(129, 40);
+            this.videoButton0.Size = new System.Drawing.Size(172, 49);
             this.videoButton0.TabIndex = 7;
             this.videoButton0.Text = "MP4";
             this.videoButton0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -137,12 +138,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(412, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(549, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(344, 178);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // audioButton1
             // 
@@ -153,10 +155,10 @@
             this.audioButton1.ForeColor = System.Drawing.Color.White;
             this.audioButton1.Image = ((System.Drawing.Image)(resources.GetObject("audioButton1.Image")));
             this.audioButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.audioButton1.Location = new System.Drawing.Point(412, 145);
-            this.audioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.audioButton1.Location = new System.Drawing.Point(549, 178);
+            this.audioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.audioButton1.Name = "audioButton1";
-            this.audioButton1.Size = new System.Drawing.Size(129, 40);
+            this.audioButton1.Size = new System.Drawing.Size(172, 49);
             this.audioButton1.TabIndex = 9;
             this.audioButton1.Text = "MP3";
             this.audioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -173,10 +175,10 @@
             this.videoButton1.ForeColor = System.Drawing.Color.White;
             this.videoButton1.Image = ((System.Drawing.Image)(resources.GetObject("videoButton1.Image")));
             this.videoButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.videoButton1.Location = new System.Drawing.Point(541, 145);
-            this.videoButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.videoButton1.Location = new System.Drawing.Point(721, 178);
+            this.videoButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.videoButton1.Name = "videoButton1";
-            this.videoButton1.Size = new System.Drawing.Size(129, 40);
+            this.videoButton1.Size = new System.Drawing.Size(172, 49);
             this.videoButton1.TabIndex = 10;
             this.videoButton1.Text = "MP4";
             this.videoButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,12 +188,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(779, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(1039, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(258, 145);
+            this.pictureBox2.Size = new System.Drawing.Size(344, 178);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // audioButton2
             // 
@@ -202,10 +205,10 @@
             this.audioButton2.ForeColor = System.Drawing.Color.White;
             this.audioButton2.Image = ((System.Drawing.Image)(resources.GetObject("audioButton2.Image")));
             this.audioButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.audioButton2.Location = new System.Drawing.Point(779, 145);
-            this.audioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.audioButton2.Location = new System.Drawing.Point(1039, 178);
+            this.audioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.audioButton2.Name = "audioButton2";
-            this.audioButton2.Size = new System.Drawing.Size(129, 40);
+            this.audioButton2.Size = new System.Drawing.Size(172, 49);
             this.audioButton2.TabIndex = 12;
             this.audioButton2.Text = "MP3";
             this.audioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,10 +225,10 @@
             this.videoButton2.ForeColor = System.Drawing.Color.White;
             this.videoButton2.Image = ((System.Drawing.Image)(resources.GetObject("videoButton2.Image")));
             this.videoButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.videoButton2.Location = new System.Drawing.Point(908, 145);
-            this.videoButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.videoButton2.Location = new System.Drawing.Point(1211, 178);
+            this.videoButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.videoButton2.Name = "videoButton2";
-            this.videoButton2.Size = new System.Drawing.Size(129, 40);
+            this.videoButton2.Size = new System.Drawing.Size(172, 49);
             this.videoButton2.TabIndex = 13;
             this.videoButton2.Text = "MP4";
             this.videoButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -235,12 +238,13 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(45, 277);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(60, 341);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(258, 145);
+            this.pictureBox3.Size = new System.Drawing.Size(344, 178);
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // audioButton3
             // 
@@ -251,10 +255,10 @@
             this.audioButton3.ForeColor = System.Drawing.Color.White;
             this.audioButton3.Image = ((System.Drawing.Image)(resources.GetObject("audioButton3.Image")));
             this.audioButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.audioButton3.Location = new System.Drawing.Point(45, 422);
-            this.audioButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.audioButton3.Location = new System.Drawing.Point(60, 519);
+            this.audioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.audioButton3.Name = "audioButton3";
-            this.audioButton3.Size = new System.Drawing.Size(129, 40);
+            this.audioButton3.Size = new System.Drawing.Size(172, 49);
             this.audioButton3.TabIndex = 15;
             this.audioButton3.Text = "MP3";
             this.audioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -271,10 +275,10 @@
             this.videoButton3.ForeColor = System.Drawing.Color.White;
             this.videoButton3.Image = ((System.Drawing.Image)(resources.GetObject("videoButton3.Image")));
             this.videoButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.videoButton3.Location = new System.Drawing.Point(174, 422);
-            this.videoButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.videoButton3.Location = new System.Drawing.Point(232, 519);
+            this.videoButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.videoButton3.Name = "videoButton3";
-            this.videoButton3.Size = new System.Drawing.Size(129, 40);
+            this.videoButton3.Size = new System.Drawing.Size(172, 49);
             this.videoButton3.TabIndex = 16;
             this.videoButton3.Text = "MP4";
             this.videoButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -284,12 +288,13 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(412, 277);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(549, 341);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(258, 145);
+            this.pictureBox4.Size = new System.Drawing.Size(344, 178);
             this.pictureBox4.TabIndex = 20;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // audioButton4
             // 
@@ -300,10 +305,10 @@
             this.audioButton4.ForeColor = System.Drawing.Color.White;
             this.audioButton4.Image = ((System.Drawing.Image)(resources.GetObject("audioButton4.Image")));
             this.audioButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.audioButton4.Location = new System.Drawing.Point(412, 422);
-            this.audioButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.audioButton4.Location = new System.Drawing.Point(549, 519);
+            this.audioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.audioButton4.Name = "audioButton4";
-            this.audioButton4.Size = new System.Drawing.Size(129, 40);
+            this.audioButton4.Size = new System.Drawing.Size(172, 49);
             this.audioButton4.TabIndex = 18;
             this.audioButton4.Text = "MP3";
             this.audioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -320,10 +325,10 @@
             this.videoButton4.ForeColor = System.Drawing.Color.White;
             this.videoButton4.Image = ((System.Drawing.Image)(resources.GetObject("videoButton4.Image")));
             this.videoButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.videoButton4.Location = new System.Drawing.Point(541, 422);
-            this.videoButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.videoButton4.Location = new System.Drawing.Point(721, 519);
+            this.videoButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.videoButton4.Name = "videoButton4";
-            this.videoButton4.Size = new System.Drawing.Size(129, 40);
+            this.videoButton4.Size = new System.Drawing.Size(172, 49);
             this.videoButton4.TabIndex = 19;
             this.videoButton4.Text = "MP4";
             this.videoButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -333,12 +338,13 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(779, 277);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Location = new System.Drawing.Point(1039, 341);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(258, 145);
+            this.pictureBox5.Size = new System.Drawing.Size(344, 178);
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // audioButton5
             // 
@@ -349,10 +355,10 @@
             this.audioButton5.ForeColor = System.Drawing.Color.White;
             this.audioButton5.Image = ((System.Drawing.Image)(resources.GetObject("audioButton5.Image")));
             this.audioButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.audioButton5.Location = new System.Drawing.Point(779, 422);
-            this.audioButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.audioButton5.Location = new System.Drawing.Point(1039, 519);
+            this.audioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.audioButton5.Name = "audioButton5";
-            this.audioButton5.Size = new System.Drawing.Size(129, 40);
+            this.audioButton5.Size = new System.Drawing.Size(172, 49);
             this.audioButton5.TabIndex = 21;
             this.audioButton5.Text = "MP3";
             this.audioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -369,10 +375,10 @@
             this.videoButton5.ForeColor = System.Drawing.Color.White;
             this.videoButton5.Image = ((System.Drawing.Image)(resources.GetObject("videoButton5.Image")));
             this.videoButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.videoButton5.Location = new System.Drawing.Point(908, 422);
-            this.videoButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.videoButton5.Location = new System.Drawing.Point(1211, 519);
+            this.videoButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.videoButton5.Name = "videoButton5";
-            this.videoButton5.Size = new System.Drawing.Size(129, 40);
+            this.videoButton5.Size = new System.Drawing.Size(172, 49);
             this.videoButton5.TabIndex = 22;
             this.videoButton5.Text = "MP4";
             this.videoButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -383,10 +389,9 @@
             // title0
             // 
             this.title0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title0.Location = new System.Drawing.Point(41, 187);
-            this.title0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title0.Location = new System.Drawing.Point(55, 230);
             this.title0.Name = "title0";
-            this.title0.Size = new System.Drawing.Size(262, 26);
+            this.title0.Size = new System.Drawing.Size(349, 32);
             this.title0.TabIndex = 25;
             this.title0.Text = "Lorem ipsum dolor loer...";
             // 
@@ -394,10 +399,9 @@
             // 
             this.channelName0.AutoSize = true;
             this.channelName0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.channelName0.Location = new System.Drawing.Point(42, 213);
-            this.channelName0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.channelName0.Location = new System.Drawing.Point(56, 262);
             this.channelName0.Name = "channelName0";
-            this.channelName0.Size = new System.Drawing.Size(101, 17);
+            this.channelName0.Size = new System.Drawing.Size(119, 20);
             this.channelName0.TabIndex = 26;
             this.channelName0.Text = "Channel Name";
             // 
@@ -405,20 +409,18 @@
             // 
             this.viewCount0.AutoSize = true;
             this.viewCount0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.viewCount0.Location = new System.Drawing.Point(42, 239);
-            this.viewCount0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.viewCount0.Location = new System.Drawing.Point(56, 294);
             this.viewCount0.Name = "viewCount0";
-            this.viewCount0.Size = new System.Drawing.Size(70, 17);
+            this.viewCount0.Size = new System.Drawing.Size(83, 20);
             this.viewCount0.TabIndex = 27;
             this.viewCount0.Text = "496 views";
             // 
             // dataLabel0
             // 
             this.dataLabel0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataLabel0.Location = new System.Drawing.Point(174, 239);
-            this.dataLabel0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dataLabel0.Location = new System.Drawing.Point(232, 294);
             this.dataLabel0.Name = "dataLabel0";
-            this.dataLabel0.Size = new System.Drawing.Size(129, 20);
+            this.dataLabel0.Size = new System.Drawing.Size(172, 25);
             this.dataLabel0.TabIndex = 28;
             this.dataLabel0.Text = "1 year ago";
             this.dataLabel0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -426,10 +428,9 @@
             // dataLabel1
             // 
             this.dataLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataLabel1.Location = new System.Drawing.Point(541, 239);
-            this.dataLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dataLabel1.Location = new System.Drawing.Point(721, 294);
             this.dataLabel1.Name = "dataLabel1";
-            this.dataLabel1.Size = new System.Drawing.Size(129, 20);
+            this.dataLabel1.Size = new System.Drawing.Size(172, 25);
             this.dataLabel1.TabIndex = 32;
             this.dataLabel1.Text = "1 year ago";
             this.dataLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -438,10 +439,9 @@
             // 
             this.viewCount1.AutoSize = true;
             this.viewCount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.viewCount1.Location = new System.Drawing.Point(409, 239);
-            this.viewCount1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.viewCount1.Location = new System.Drawing.Point(545, 294);
             this.viewCount1.Name = "viewCount1";
-            this.viewCount1.Size = new System.Drawing.Size(70, 17);
+            this.viewCount1.Size = new System.Drawing.Size(83, 20);
             this.viewCount1.TabIndex = 31;
             this.viewCount1.Text = "496 views";
             // 
@@ -449,30 +449,27 @@
             // 
             this.channelName1.AutoSize = true;
             this.channelName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.channelName1.Location = new System.Drawing.Point(409, 213);
-            this.channelName1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.channelName1.Location = new System.Drawing.Point(545, 262);
             this.channelName1.Name = "channelName1";
-            this.channelName1.Size = new System.Drawing.Size(101, 17);
+            this.channelName1.Size = new System.Drawing.Size(119, 20);
             this.channelName1.TabIndex = 30;
             this.channelName1.Text = "Channel Name";
             // 
             // title1
             // 
             this.title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title1.Location = new System.Drawing.Point(408, 187);
-            this.title1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title1.Location = new System.Drawing.Point(544, 230);
             this.title1.Name = "title1";
-            this.title1.Size = new System.Drawing.Size(262, 26);
+            this.title1.Size = new System.Drawing.Size(349, 32);
             this.title1.TabIndex = 29;
             this.title1.Text = "Lorem ipsum dolor loer...";
             // 
             // dataLabel2
             // 
             this.dataLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataLabel2.Location = new System.Drawing.Point(908, 239);
-            this.dataLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dataLabel2.Location = new System.Drawing.Point(1211, 294);
             this.dataLabel2.Name = "dataLabel2";
-            this.dataLabel2.Size = new System.Drawing.Size(129, 20);
+            this.dataLabel2.Size = new System.Drawing.Size(172, 25);
             this.dataLabel2.TabIndex = 36;
             this.dataLabel2.Text = "1 year ago";
             this.dataLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -481,10 +478,9 @@
             // 
             this.viewCount2.AutoSize = true;
             this.viewCount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.viewCount2.Location = new System.Drawing.Point(776, 239);
-            this.viewCount2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.viewCount2.Location = new System.Drawing.Point(1035, 294);
             this.viewCount2.Name = "viewCount2";
-            this.viewCount2.Size = new System.Drawing.Size(70, 17);
+            this.viewCount2.Size = new System.Drawing.Size(83, 20);
             this.viewCount2.TabIndex = 35;
             this.viewCount2.Text = "496 views";
             // 
@@ -492,30 +488,27 @@
             // 
             this.channelName2.AutoSize = true;
             this.channelName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.channelName2.Location = new System.Drawing.Point(776, 213);
-            this.channelName2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.channelName2.Location = new System.Drawing.Point(1035, 262);
             this.channelName2.Name = "channelName2";
-            this.channelName2.Size = new System.Drawing.Size(101, 17);
+            this.channelName2.Size = new System.Drawing.Size(119, 20);
             this.channelName2.TabIndex = 34;
             this.channelName2.Text = "Channel Name";
             // 
             // title2
             // 
             this.title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title2.Location = new System.Drawing.Point(775, 187);
-            this.title2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title2.Location = new System.Drawing.Point(1033, 230);
             this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(262, 26);
+            this.title2.Size = new System.Drawing.Size(349, 32);
             this.title2.TabIndex = 33;
             this.title2.Text = "Lorem ipsum dolor loer...";
             // 
             // dataLabel3
             // 
             this.dataLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataLabel3.Location = new System.Drawing.Point(174, 517);
-            this.dataLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dataLabel3.Location = new System.Drawing.Point(232, 636);
             this.dataLabel3.Name = "dataLabel3";
-            this.dataLabel3.Size = new System.Drawing.Size(129, 20);
+            this.dataLabel3.Size = new System.Drawing.Size(172, 25);
             this.dataLabel3.TabIndex = 40;
             this.dataLabel3.Text = "1 year ago";
             this.dataLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -524,10 +517,9 @@
             // 
             this.viewCount3.AutoSize = true;
             this.viewCount3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.viewCount3.Location = new System.Drawing.Point(42, 517);
-            this.viewCount3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.viewCount3.Location = new System.Drawing.Point(56, 636);
             this.viewCount3.Name = "viewCount3";
-            this.viewCount3.Size = new System.Drawing.Size(70, 17);
+            this.viewCount3.Size = new System.Drawing.Size(83, 20);
             this.viewCount3.TabIndex = 39;
             this.viewCount3.Text = "496 views";
             // 
@@ -535,30 +527,27 @@
             // 
             this.channelName3.AutoSize = true;
             this.channelName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.channelName3.Location = new System.Drawing.Point(42, 491);
-            this.channelName3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.channelName3.Location = new System.Drawing.Point(56, 604);
             this.channelName3.Name = "channelName3";
-            this.channelName3.Size = new System.Drawing.Size(101, 17);
+            this.channelName3.Size = new System.Drawing.Size(119, 20);
             this.channelName3.TabIndex = 38;
             this.channelName3.Text = "Channel Name";
             // 
             // title3
             // 
             this.title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title3.Location = new System.Drawing.Point(41, 464);
-            this.title3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title3.Location = new System.Drawing.Point(55, 571);
             this.title3.Name = "title3";
-            this.title3.Size = new System.Drawing.Size(262, 26);
+            this.title3.Size = new System.Drawing.Size(349, 32);
             this.title3.TabIndex = 37;
             this.title3.Text = "Lorem ipsum dolor loer...";
             // 
             // dataLabel4
             // 
             this.dataLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataLabel4.Location = new System.Drawing.Point(541, 517);
-            this.dataLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dataLabel4.Location = new System.Drawing.Point(721, 636);
             this.dataLabel4.Name = "dataLabel4";
-            this.dataLabel4.Size = new System.Drawing.Size(129, 20);
+            this.dataLabel4.Size = new System.Drawing.Size(172, 25);
             this.dataLabel4.TabIndex = 44;
             this.dataLabel4.Text = "1 year ago";
             this.dataLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -567,10 +556,9 @@
             // 
             this.viewCount4.AutoSize = true;
             this.viewCount4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.viewCount4.Location = new System.Drawing.Point(409, 517);
-            this.viewCount4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.viewCount4.Location = new System.Drawing.Point(545, 636);
             this.viewCount4.Name = "viewCount4";
-            this.viewCount4.Size = new System.Drawing.Size(70, 17);
+            this.viewCount4.Size = new System.Drawing.Size(83, 20);
             this.viewCount4.TabIndex = 43;
             this.viewCount4.Text = "496 views";
             // 
@@ -578,30 +566,27 @@
             // 
             this.channelName4.AutoSize = true;
             this.channelName4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.channelName4.Location = new System.Drawing.Point(408, 491);
-            this.channelName4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.channelName4.Location = new System.Drawing.Point(544, 604);
             this.channelName4.Name = "channelName4";
-            this.channelName4.Size = new System.Drawing.Size(101, 17);
+            this.channelName4.Size = new System.Drawing.Size(119, 20);
             this.channelName4.TabIndex = 42;
             this.channelName4.Text = "Channel Name";
             // 
             // title4
             // 
             this.title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title4.Location = new System.Drawing.Point(408, 464);
-            this.title4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title4.Location = new System.Drawing.Point(544, 571);
             this.title4.Name = "title4";
-            this.title4.Size = new System.Drawing.Size(262, 26);
+            this.title4.Size = new System.Drawing.Size(349, 32);
             this.title4.TabIndex = 41;
             this.title4.Text = "Lorem ipsum dolor loer...";
             // 
             // dataLabel5
             // 
             this.dataLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataLabel5.Location = new System.Drawing.Point(908, 517);
-            this.dataLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dataLabel5.Location = new System.Drawing.Point(1211, 636);
             this.dataLabel5.Name = "dataLabel5";
-            this.dataLabel5.Size = new System.Drawing.Size(129, 20);
+            this.dataLabel5.Size = new System.Drawing.Size(172, 25);
             this.dataLabel5.TabIndex = 48;
             this.dataLabel5.Text = "1 year ago";
             this.dataLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -610,10 +595,9 @@
             // 
             this.viewCount5.AutoSize = true;
             this.viewCount5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.viewCount5.Location = new System.Drawing.Point(776, 517);
-            this.viewCount5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.viewCount5.Location = new System.Drawing.Point(1035, 636);
             this.viewCount5.Name = "viewCount5";
-            this.viewCount5.Size = new System.Drawing.Size(70, 17);
+            this.viewCount5.Size = new System.Drawing.Size(83, 20);
             this.viewCount5.TabIndex = 47;
             this.viewCount5.Text = "496 views";
             // 
@@ -621,20 +605,18 @@
             // 
             this.channelName5.AutoSize = true;
             this.channelName5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.channelName5.Location = new System.Drawing.Point(776, 491);
-            this.channelName5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.channelName5.Location = new System.Drawing.Point(1035, 604);
             this.channelName5.Name = "channelName5";
-            this.channelName5.Size = new System.Drawing.Size(101, 17);
+            this.channelName5.Size = new System.Drawing.Size(119, 20);
             this.channelName5.TabIndex = 46;
             this.channelName5.Text = "Channel Name";
             // 
             // title5
             // 
             this.title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title5.Location = new System.Drawing.Point(775, 464);
-            this.title5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title5.Location = new System.Drawing.Point(1033, 571);
             this.title5.Name = "title5";
-            this.title5.Size = new System.Drawing.Size(262, 26);
+            this.title5.Size = new System.Drawing.Size(349, 32);
             this.title5.TabIndex = 45;
             this.title5.Text = "Lorem ipsum dolor loer...";
             // 
@@ -643,10 +625,9 @@
             this.durationLabel1.BackColor = System.Drawing.Color.Black;
             this.durationLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.durationLabel1.Location = new System.Drawing.Point(613, 122);
-            this.durationLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.durationLabel1.Location = new System.Drawing.Point(817, 150);
             this.durationLabel1.Name = "durationLabel1";
-            this.durationLabel1.Size = new System.Drawing.Size(57, 23);
+            this.durationLabel1.Size = new System.Drawing.Size(76, 28);
             this.durationLabel1.TabIndex = 49;
             this.durationLabel1.Text = "59:59";
             this.durationLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -656,10 +637,9 @@
             this.durationLabel0.BackColor = System.Drawing.Color.Black;
             this.durationLabel0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel0.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.durationLabel0.Location = new System.Drawing.Point(246, 124);
-            this.durationLabel0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.durationLabel0.Location = new System.Drawing.Point(328, 153);
             this.durationLabel0.Name = "durationLabel0";
-            this.durationLabel0.Size = new System.Drawing.Size(57, 23);
+            this.durationLabel0.Size = new System.Drawing.Size(76, 28);
             this.durationLabel0.TabIndex = 55;
             this.durationLabel0.Text = "59:59";
             this.durationLabel0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -669,10 +649,9 @@
             this.durationLabel2.BackColor = System.Drawing.Color.Black;
             this.durationLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.durationLabel2.Location = new System.Drawing.Point(980, 122);
-            this.durationLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.durationLabel2.Location = new System.Drawing.Point(1307, 150);
             this.durationLabel2.Name = "durationLabel2";
-            this.durationLabel2.Size = new System.Drawing.Size(57, 23);
+            this.durationLabel2.Size = new System.Drawing.Size(76, 28);
             this.durationLabel2.TabIndex = 56;
             this.durationLabel2.Text = "59:59";
             this.durationLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -682,10 +661,9 @@
             this.durationLabel4.BackColor = System.Drawing.Color.Black;
             this.durationLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.durationLabel4.Location = new System.Drawing.Point(613, 399);
-            this.durationLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.durationLabel4.Location = new System.Drawing.Point(817, 491);
             this.durationLabel4.Name = "durationLabel4";
-            this.durationLabel4.Size = new System.Drawing.Size(57, 23);
+            this.durationLabel4.Size = new System.Drawing.Size(76, 28);
             this.durationLabel4.TabIndex = 57;
             this.durationLabel4.Text = "59:59";
             this.durationLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -695,10 +673,9 @@
             this.durationLabel3.BackColor = System.Drawing.Color.Black;
             this.durationLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.durationLabel3.Location = new System.Drawing.Point(246, 399);
-            this.durationLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.durationLabel3.Location = new System.Drawing.Point(328, 491);
             this.durationLabel3.Name = "durationLabel3";
-            this.durationLabel3.Size = new System.Drawing.Size(57, 23);
+            this.durationLabel3.Size = new System.Drawing.Size(76, 28);
             this.durationLabel3.TabIndex = 58;
             this.durationLabel3.Text = "59:59";
             this.durationLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -708,17 +685,16 @@
             this.durationLabel5.BackColor = System.Drawing.Color.Black;
             this.durationLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.durationLabel5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.durationLabel5.Location = new System.Drawing.Point(980, 399);
-            this.durationLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.durationLabel5.Location = new System.Drawing.Point(1307, 491);
             this.durationLabel5.Name = "durationLabel5";
-            this.durationLabel5.Size = new System.Drawing.Size(57, 23);
+            this.durationLabel5.Size = new System.Drawing.Size(76, 28);
             this.durationLabel5.TabIndex = 59;
             this.durationLabel5.Text = "59:59";
             this.durationLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SearchResult
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.durationLabel5);
             this.Controls.Add(this.durationLabel3);
@@ -768,9 +744,9 @@
             this.Controls.Add(this.dataLabel1);
             this.Controls.Add(this.dataLabel0);
             this.Controls.Add(this.dataLabel4);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SearchResult";
-            this.Size = new System.Drawing.Size(1083, 547);
+            this.Size = new System.Drawing.Size(1444, 673);
             this.Load += new System.EventHandler(this.SearchResult_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

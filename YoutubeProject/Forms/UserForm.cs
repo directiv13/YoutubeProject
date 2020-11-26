@@ -22,11 +22,6 @@ namespace YoutubeProject
             searchResult1.Visible = false;
         }
 
-        private void button3_MouseEnter(object sender, EventArgs e)
-        {
-            homeButton.BackColor = Color.FromArgb(194, 197, 209, 82);
-        }
-
         private void Mouse_Enter(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.FromArgb(0, 194, 197, 209);
@@ -50,8 +45,11 @@ namespace YoutubeProject
         private async void searchButton_Click(object sender, EventArgs e)
         {
             searchResult1.SearchRequest = searchText.Text;
-            await searchResult1.ShowResult();
-            searchResult1.BringToFront();
+
+            if (!await searchResult1.GetYoutubeVideos())
+            {
+                infoTextBox.Text = "Invalid search query. =(";
+            }
         }
 
         private void searchText_KeyUp(object sender, KeyEventArgs e)
@@ -62,6 +60,11 @@ namespace YoutubeProject
                     searchButton_Click(searchText, null);
                     break;
             }
+        }
+
+        private void collapseButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace YoutubeProject
 {
     public partial class SearchResult : UserControl
     {
-        YoutubeSearch search;
+        UIAdapter searchResultAdapter;
         List<YoutubeVideo> youtubeVideos;
         private Button[] videoButtonCollection
         {
@@ -90,7 +90,7 @@ namespace YoutubeProject
         {
             InitializeComponent();
         }
-        private void buttonMP3_click(object sender, EventArgs e)
+        private async void buttonMP3_click(object sender, EventArgs e)
         {
 
             for (int i = 0; i < audioButtonCollection.Length; i++)
@@ -103,7 +103,7 @@ namespace YoutubeProject
                         {
                             if (youtubeVideos[i] != null)
                             {
-                                youtubeVideos[i].Download(YoutubeVideo.DownloadingFormat.MP3, saveDialog.SelectedPath);
+                               await youtubeVideos[i].DownloadAsync(YoutubeVideo.DownloadingFormat.MP3, saveDialog.SelectedPath);
                             }
                         }
                     }
@@ -111,31 +111,20 @@ namespace YoutubeProject
                 }
             }
         }
-        public async Task ShowResult()
+        public async Task<bool> GetYoutubeVideos()
         {
-            youtubeVideos.Clear();
-            JToken contents = await search.GetContents(StringToUtf8(SearchRequest));
-            if (contents == null)
+            youtubeVideos = await searchResultAdapter.GetYoutubeVideosAsync(SearchRequest);
+            if (youtubeVideos != null)
             {
-                this.Visible = false;
-                MessageBox.Show("Invalid search request.");
-                return;
+                FillForm();
+                this.BringToFront();
+                return true;
             }
-
-            YoutubeVideoBuilder builder = new YoutubeVideoBuilder(contents);
-            for(int i = 0; i < 6; i++)
-            {
-                try
-                {
-                    youtubeVideos.Add(builder.GetYoutubeVideo());
-                }
-                catch(NullReferenceException ne)
-                {
-                    MessageBox.Show(ne.Message);
-                    return;
-                }
-            }
-
+            this.Hide();
+            return false;
+        }
+        public void FillForm()
+        {
             for (int i = 0; i < youtubeVideos.Count() && i < 6; i++)
             {
                 //get thumbnail
@@ -152,15 +141,15 @@ namespace YoutubeProject
                 this.durationCollection[i].Text = youtubeVideos[i].Duration;
             }
             this.Visible = true;
+            this.Show();
         }
         private void SearchResult_Load(object sender, EventArgs e)
         {
             foreach (var pictureBox in pictureBoxCollection)
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            search = new YoutubeSearch();
-            youtubeVideos = new List<YoutubeVideo>();
+            searchResultAdapter = new UIAdapter(new YoutubeSearch());
         }
-        private void buttonMP4_click(object sender, EventArgs e)
+        private async void buttonMP4_click(object sender, EventArgs e)
         {
             for (int i = 0; i < videoButtonCollection.Length; i++)
             {
@@ -172,7 +161,7 @@ namespace YoutubeProject
                         {
                             if (youtubeVideos[i] != null)
                             {
-                                youtubeVideos[i].Download(YoutubeVideo.DownloadingFormat.MP4, saveDialog.SelectedPath);
+                                await youtubeVideos[i].DownloadAsync(YoutubeVideo.DownloadingFormat.MP4, saveDialog.SelectedPath);
                             }
                         }
                     }
@@ -180,18 +169,18 @@ namespace YoutubeProject
                 }
             }
         }
-        private string StringToUtf8(string str)
+        private void pictureBox_Click(object sender, EventArgs e)
         {
-            byte[] byteArray = Encoding.ASCII.GetBytes(str);
-            List<string> chars = byteArray.Select(b => b.ToString("X2")).ToList();
-            string result = "";
-            foreach (string stri in chars)
+            for (int i = 0; i < pictureBoxCollection.Length; i++)
             {
-                result += "%" + stri;
+                if(sender.Equals(pictureBoxCollection[i]))
+                {
+                    MediaPlayerForm player = new MediaPlayerForm(youtubeVideos[i].VideoID);
+                    player.Text = youtubeVideos[i].Title;
+                    player.Show();
+                    return;
+                }
             }
-            result = result.Replace("%20","+");
-
-            return result;
         }
     }
 }
