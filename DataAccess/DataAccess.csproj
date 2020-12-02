@@ -155,13 +155,9 @@
     <Compile Include="Contexts\IDownloadsHistoryContext.cs" />
     <Compile Include="Contexts\ISearchHistoryContext.cs" />
     <Compile Include="Extensions\ServiceCollectionExtensions.cs" />
-    <Compile Include="Migrations\202012021135106_InitialCreate.cs" />
-    <Compile Include="Migrations\202012021135106_InitialCreate.designer.cs">
-      <DependentUpon>202012021135106_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012021557091_Initial.cs" />
-    <Compile Include="Migrations\202012021557091_Initial.designer.cs">
-      <DependentUpon>202012021557091_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202012022154597_Initial.cs" />
+    <Compile Include="Migrations\202012022154597_Initial.designer.cs">
+      <DependentUpon>202012022154597_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\User.cs" />
@@ -181,11 +177,8 @@
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012021135106_InitialCreate.resx">
-      <DependentUpon>202012021135106_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012021557091_Initial.resx">
-      <DependentUpon>202012021557091_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012022154597_Initial.resx">
+      <DependentUpon>202012022154597_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

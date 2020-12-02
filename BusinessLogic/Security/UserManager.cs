@@ -6,6 +6,7 @@ using DataAccess.Contexts;
 using DataAccess.Models;
 using System;
 using System.Data.Entity;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 
 namespace BusinessLogic.Security
@@ -61,11 +62,16 @@ namespace BusinessLogic.Security
 
         public async Task<UserOpResult> TrySignUpAsync(CreateUserDto user)
         {
+            var userEntity = new User();
             try
             {
-                var userEntity = mapper.Map<User>(user);
+                userEntity = mapper.Map<User>(user);
                 userContext.Users.Add(userEntity);
                 await userContext.SaveChangesAsync();
+                return new UserOpResult { User = userEntity, Exception = null };
+            }
+            catch(SocketException) // костыль, связанный с реализацией сокетов в .NET Full Framework
+            {
                 return new UserOpResult { User = userEntity, Exception = null };
             }
             catch(Exception e)

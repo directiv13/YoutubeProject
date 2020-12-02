@@ -1,20 +1,15 @@
 ﻿namespace DataAccess.Migrations
 {
-    using DataAccess.Contexts;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<UserContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.Contexts.UserContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "DataAccess.UserContext";
         }
 
-        protected override void Seed(UserContext context)
+        protected override void Seed(DataAccess.Contexts.UserContext context)
         {
             //  This method will be called after migrating to the latest version.
 
