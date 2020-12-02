@@ -1,7 +1,7 @@
 ﻿using DataAccess.Models;
 using System.Data.Entity;
 
-namespace DataAccess
+namespace DataAccess.Contexts
 {
     public class UserContext : DbContext
     {
