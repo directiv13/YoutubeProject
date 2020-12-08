@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="AutoMapper\Extensions\ServiceCollectionExtensions.cs" />
     <Compile Include="AutoMapper\MappingProfiles\UserMappingProfile.cs" />
+    <Compile Include="Exceptions\BadEmailException.cs" />
     <Compile Include="Exceptions\BadLoginException.cs" />
     <Compile Include="Models\CreateUserDto.cs" />
     <Compile Include="Models\UserOpResult.cs" />

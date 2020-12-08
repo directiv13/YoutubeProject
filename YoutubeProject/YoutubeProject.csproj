@@ -254,6 +254,9 @@
     <Compile Include="Forms\MediaPlayerForm.Designer.cs">
       <DependentUpon>MediaPlayerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation\DataValidator.cs" />
+    <Compile Include="Validation\EmailValidator.cs" />
+    <Compile Include="Validation\IValidation.cs" />
     <Compile Include="UserControls\LogInControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

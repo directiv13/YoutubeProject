@@ -23,7 +23,7 @@ namespace DataAccess.Extensions
 
             serviceCollection.AddSingleton<IDownloadsHistoryContext>(downloadsDbContext);
             serviceCollection.AddSingleton<ISearchHistoryContext>(searchesDbContext);
-            serviceCollection.AddSingleton(new UserContext());
+            serviceCollection.AddTransient<UserContext>(x => new UserContext());
             return serviceCollection;
         }
     }

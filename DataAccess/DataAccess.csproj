@@ -159,6 +159,10 @@
     <Compile Include="Migrations\202012022154597_Initial.designer.cs">
       <DependentUpon>202012022154597_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012041538389_emailPassword.cs" />
+    <Compile Include="Migrations\202012041538389_emailPassword.designer.cs">
+      <DependentUpon>202012041538389_emailPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\YtHistoryItem.cs" />
@@ -179,6 +183,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012022154597_Initial.resx">
       <DependentUpon>202012022154597_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012041538389_emailPassword.resx">
+      <DependentUpon>202012041538389_emailPassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
