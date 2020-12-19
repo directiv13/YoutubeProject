@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Extensions.DependencyInjection;
 using BusinessLogic.Security;
+using System.ComponentModel.DataAnnotations;
+using DataAccess.Models;
 
 namespace YoutubeProject
 {
@@ -19,44 +21,51 @@ namespace YoutubeProject
             InitializeComponent();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void signUp_Click(object sender, EventArgs e)
         {
+            exceptionLabel.Text = string.Empty;
+            userValidationObjectBindingSource.EndEdit();
+            UserValidationObject currentUser = userValidationObjectBindingSource.Current as UserValidationObject;
+            if (currentUser != null)
+            {
+                ValidationContext context = new ValidationContext(currentUser, null, null);
+                IList<ValidationResult> errors = new List<ValidationResult>();
+                if (!Validator.TryValidateObject(currentUser, context, errors, true))
+                {
+                    foreach (ValidationResult error in errors)
+                        exceptionLabel.Text += error.ErrorMessage + "\n";
+                    return;
+                }
+            }
+
             var userManager = Program.ServiceProvider.GetService<IUserManager>();
             using (userManager)
             {
-                DateTime birthDate;// = DateTime.Parse(month.Text + "/" + day.Text + "/" + year.Text);
-                if (DateTime.TryParse(month.Text + "/" + day.Text + "/" + year.Text, out birthDate))
+                var user = await userManager.TrySignUpAsync(new BusinessLogic.Models.CreateUserDto()
                 {
-                    var user = await userManager.TrySignUpAsync(new BusinessLogic.Models.CreateUserDto()
-                    {
-                        FirstName = firstName.Text,
-                        SecondName = secondName.Text,
-                        Email = email.Text,
-                        MotherTown = motherTown.Text,
-                        BirthDate = birthDate,
-                        Password = password.Text
-                    });
-                    if (user.User != null)
-                    {
-                        UserForm userForm = new UserForm();
-                        this.ParentForm.Hide();
-                        userForm.Show();
-                    }
-                    else if (user.Exception != null)
-                    {
-                        exceptionLabel.Text = user.Exception.Message;
-                    }
+                    FirstName = firstName.Text,
+                    SecondName = secondName.Text,
+                    Email = email.Text,
+                    MotherTown = motherTown.Text,
+                    BirthDate = (DateTime)birthDate.ValidateText(),
+                    Password = password.Text
+                });
+                if (user.User != null)
+                {
+                    UserForm userForm = new UserForm();
+                    this.ParentForm.Hide();
+                    userForm.Show();
                 }
-                else
-                    exceptionLabel.Text = "The birth date should be entered in the format (dd:mm:yyyy).";
+                else if (user.Exception != null)
+                {
+                    exceptionLabel.Text = user.Exception.Message;
+                }
             }
         }
 
-        private void email_Changed(object sender, KeyPressEventArgs e)
+        private void RegistrationControl_Load(object sender, EventArgs e)
         {
-            exceptionLabel.Text = string.Empty;
-            if (!Validation.EmailValidator.GetInstance(email.Text).IsSatisfied())
-                exceptionLabel.Text = "Incorrect format of email adress";
+            userValidationObjectBindingSource.DataSource = new UserValidationObject();
         }
 
     }

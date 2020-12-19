@@ -38,8 +38,10 @@
             this.profileButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.infoTextBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.searchText = new YoutubeProject.PlaceHolderTextBox();
             this.searchResult1 = new YoutubeProject.SearchResult();
+            this.historyControl1 = new YoutubeProject.HistoryControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +127,7 @@
             this.historyButton.Text = "History";
             this.historyButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.historyButton.UseVisualStyleBackColor = true;
+            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
             this.historyButton.MouseEnter += new System.EventHandler(this.Mouse_Enter);
             this.historyButton.MouseLeave += new System.EventHandler(this.Mouse_Leave);
             // 
@@ -152,7 +155,7 @@
             this.searchButton.FlatAppearance.BorderSize = 0;
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.Image = ((System.Drawing.Image)(resources.GetObject("searchButton.Image")));
-            this.searchButton.Location = new System.Drawing.Point(1175, 65);
+            this.searchButton.Location = new System.Drawing.Point(1175, 66);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(38, 32);
             this.searchButton.TabIndex = 51;
@@ -173,13 +176,22 @@
             this.infoTextBox.Text = "Enter the search text to find and download \r\nhigh-quality videos from YouTube";
             this.infoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.panel2.Location = new System.Drawing.Point(551, 65);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(150, 34);
+            this.panel2.TabIndex = 55;
+            // 
             // searchText
             // 
             this.searchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
             this.searchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.searchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.searchText.Location = new System.Drawing.Point(561, 64);
+            this.searchText.Location = new System.Drawing.Point(559, 65);
             this.searchText.Margin = new System.Windows.Forms.Padding(2);
             this.searchText.Name = "searchText";
             this.searchText.PlaceHolderText = "Enter a search request here...";
@@ -197,20 +209,31 @@
             this.searchResult1.Size = new System.Drawing.Size(1066, 542);
             this.searchResult1.TabIndex = 53;
             // 
+            // historyControl1
+            // 
+            this.historyControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.historyControl1.Location = new System.Drawing.Point(214, 163);
+            this.historyControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.historyControl1.Name = "historyControl1";
+            this.historyControl1.Size = new System.Drawing.Size(1066, 542);
+            this.historyControl1.TabIndex = 56;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.infoTextBox);
+            this.Controls.Add(this.historyControl1);
             this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.searchText);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.infoTextBox);
             this.Controls.Add(this.profileButton);
             this.Controls.Add(this.historyButton);
             this.Controls.Add(this.homeButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.searchText);
             this.Controls.Add(this.searchResult1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -238,5 +261,7 @@
         private System.Windows.Forms.TextBox infoTextBox;
         private SearchResult searchResult1;
         private PlaceHolderTextBox searchText;
+        private System.Windows.Forms.Panel panel2;
+        private HistoryControl historyControl1;
     }
 }

@@ -241,6 +241,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControls\HistoryBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HistoryBoxControl.Designer.cs">
+      <DependentUpon>HistoryBoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustomCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\HistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HistoryControl.Designer.cs">
+      <DependentUpon>HistoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProfileControl.Designer.cs">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DateBoxControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\EnterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +278,7 @@
     <Compile Include="Forms\MediaPlayerForm.Designer.cs">
       <DependentUpon>MediaPlayerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation\UserValidationObject.cs" />
     <Compile Include="Validation\DataValidator.cs" />
     <Compile Include="Validation\EmailValidator.cs" />
     <Compile Include="Validation\IValidation.cs" />
@@ -296,6 +321,15 @@
     <EmbeddedResource Include="Forms\MediaPlayerForm.resx">
       <DependentUpon>MediaPlayerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HistoryBoxControl.resx">
+      <DependentUpon>HistoryBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HistoryControl.resx">
+      <DependentUpon>HistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProfileControl.resx">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LogInControl.resx">
       <DependentUpon>LogInControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +352,9 @@
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BusinessLogic.Models.CreateUserDto.datasource" />
+    <None Include="Properties\DataSources\DataAccess.Models.User.datasource" />
+    <None Include="Properties\DataSources\UserValidationObject.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

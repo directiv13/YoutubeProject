@@ -22,7 +22,7 @@ namespace YoutubeProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ConfigureServices();
-            Application.Run(new EnterForm());
+            Application.Run(new UserForm());
         }
 
         static void ConfigureServices()

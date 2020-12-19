@@ -129,15 +129,18 @@
             // registrationControl1
             // 
             this.registrationControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.registrationControl1.Location = new System.Drawing.Point(0, 178);
+            this.registrationControl1.Location = new System.Drawing.Point(0, 133);
+            this.registrationControl1.Margin = new System.Windows.Forms.Padding(4);
             this.registrationControl1.Name = "registrationControl1";
-            this.registrationControl1.Size = new System.Drawing.Size(1280, 600);
+            this.registrationControl1.Size = new System.Drawing.Size(1280, 573);
             this.registrationControl1.TabIndex = 9;
+            this.registrationControl1.Tag = "";
             // 
             // logInControl1
             // 
             this.logInControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.logInControl1.Location = new System.Drawing.Point(0, 170);
+            this.logInControl1.Margin = new System.Windows.Forms.Padding(4);
             this.logInControl1.Name = "logInControl1";
             this.logInControl1.Size = new System.Drawing.Size(1280, 550);
             this.logInControl1.TabIndex = 10;
@@ -150,9 +153,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logButton);
             this.Controls.Add(this.regButton);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.registrationControl1);
             this.Controls.Add(this.logInControl1);
