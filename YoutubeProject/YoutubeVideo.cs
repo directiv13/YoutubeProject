@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoLibrary;
+using YoutubeExplode;
+using YoutubeExplode.Videos.Streams;
+using YoutubeExtractor;
 
 namespace YoutubeProject
 {
@@ -22,11 +26,11 @@ namespace YoutubeProject
         {
             this.VideoID = videoID;
         }
-        public async Task DownloadAsync(DownloadingFormat format, string folderPath)
+        public void Download(DownloadingFormat format, string folderPath)
         {
             try
             {
-                var youtube = YouTube.Default;
+                /*var youtube = YouTube.Default;
                 var video = await youtube.GetVideoAsync("https://wwww.youtube.com/watch?v=" + VideoID);
                 switch (format)
                 {
@@ -39,7 +43,12 @@ namespace YoutubeProject
                         break;
                     default:
                         break;
-                }
+                }*/
+
+                var youtubeVideo = new YoutubeClient();
+                var streamManifest = 
+
+                MessageBox.Show("Download complete!");
             }
             catch (Exception ex)
             {
@@ -47,7 +56,38 @@ namespace YoutubeProject
                 return;
             }
         }
-        public enum DownloadingFormat:byte
+        public async Task DownloadAsync(DownloadingFormat downloadinfFormat, string folderPath)
+        {
+            var youtube = new YoutubeClient();
+            StreamManifest streamManifest = await youtube.Videos.Streams.GetManifestAsync(VideoID);
+            string format;
+            IStreamInfo streamInfo;
+            switch (downloadinfFormat)
+            {   
+                case DownloadingFormat.MP3:
+                    streamInfo = streamManifest.GetAudioOnly().WithHighestBitrate();
+                    format = "mp3";
+                    break;
+                case DownloadingFormat.MP4:
+                    streamInfo = streamManifest.GetMuxed().WithHighestVideoQuality();
+                    format = "mp4";
+                    break;
+                default:
+                    streamInfo = null;
+                    format = string.Empty;
+                    break;
+            }
+            if (streamInfo != null)
+            {
+                // Get the actual stream
+                var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
+
+                // Download the stream to file
+                await youtube.Videos.Streams.DownloadAsync(streamInfo, $"{folderPath}/{Title}.{format}");
+            }
+
+        }
+        public enum DownloadingFormat : byte
         {
             MP3 = 1,
             MP4 = 2

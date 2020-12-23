@@ -160,11 +160,19 @@
     <Compile Include="Migrations\202012022154597_Initial.designer.cs">
       <DependentUpon>202012022154597_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012041538389_emailPassword.cs" />
+    <Compile Include="Migrations\202012041538389_emailPassword.designer.cs">
+      <DependentUpon>202012041538389_emailPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SearchHistoryItem.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\DownloadsHistoryItem.cs" />
     <Compile Include="Models\YtHistoryItemBase.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\YtDownloadInfo.cs" />
+    <Compile Include="Models\YtHistoryItem.cs" />
+    <Compile Include="Models\YtSearchInfo.cs" />
     <Compile Include="MongoDbOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contexts\UserContext.cs" />
@@ -182,6 +190,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012022154597_Initial.resx">
       <DependentUpon>202012022154597_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012041538389_emailPassword.resx">
+      <DependentUpon>202012041538389_emailPassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

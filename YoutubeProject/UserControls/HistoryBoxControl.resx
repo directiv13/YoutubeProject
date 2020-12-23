@@ -117,10 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="userValidationObjectBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>196, 27</value>
-  </metadata>
-  <metadata name="userBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>12, 27</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="customCheckBox1.CheckBoxImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAh9JREFUSEudlv9OwjAQx/sIPIKP4CP5Jvom+CYLhYXESLrCH0bUEIkQRQgzgj+i
+        Se23uxvbsnXFT9KQrtf79tq7FuEjilRHyvGZjJNuL9YzOdBbGWuDZvtKxuOujNUZmR8HnPeHk/Oi05Y2
+        gz1Nb8cKnGASO9CTB7NYrsxu92F+fn4NwC/6+D5S05IY5pOreqzBKa/+6vrGpOm7c1oEY1XWm9TZk9A2
+        itUpuSzjIiCB27t5vuoqdSIA9piXC9VFZAfcFsHQR5MIUxDC1nXIvRD9WJ9jACE3RcC0iWA+b53NwAuS
+        OESxXqdk2kybCMBZws42bFvHCihbB9qMkimZ+AkRAXpyT0K2jrKC0uZp+UrDfkJF4C8TSbqiP0DlavO+
+        /6BhP6EiqKNMRM9wHq7TduAMbL++vqnXDPyR720uEsrj/NllT4gQ+4aIK8DQSECIUCESJ+LSN/RMmMVi
+        5RXiM8FtLXoDdYlOaHYVeX7ZOCE4rFLKLimzOkFe/we+HKsRHW5nWyeoSNtx51J364ZQPc/15o23akaX
+        ihC9vrrAR6zomASoA/Phh0QOdxeigSoGbqf+W7gNvoVLUTDR0L2I2XtihY6NCPa5gH2X4I9cl8GLxkII
+        GXsbQvq2O2wRBJpeRgYr4K1DQ5YsbDru9p95dPhFH9/xH4BtMa8xgjqQDEUxX8PqYR+pwkt4DMhzFGxv
+        kLjbOnfqFpB0I/u/zO9ciD/3Soxv1pW2CwAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

@@ -28,223 +28,311 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.motherTownLabel = new System.Windows.Forms.Label();
+            this.birthDateLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.signUpButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.placeHolderTextBox6 = new YoutubeProject.PlaceHolderTextBox();
-            this.placeHolderTextBox5 = new YoutubeProject.PlaceHolderTextBox();
-            this.placeHolderTextBox4 = new YoutubeProject.PlaceHolderTextBox();
-            this.placeHolderTextBox3 = new YoutubeProject.PlaceHolderTextBox();
-            this.placeHolderTextBox2 = new YoutubeProject.PlaceHolderTextBox();
-            this.placeHolderTextBox1 = new YoutubeProject.PlaceHolderTextBox();
+            this.email = new YoutubeProject.PlaceHolderTextBox();
+            this.userValidationObjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.firstName = new YoutubeProject.PlaceHolderTextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.motherTown = new YoutubeProject.PlaceHolderTextBox();
+            this.birthDate = new YoutubeProject.DateBoxControl();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.password = new YoutubeProject.PlaceHolderTextBox();
+            this.secondName = new YoutubeProject.PlaceHolderTextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.exceptionLabel = new System.Windows.Forms.Label();
+            this.secondNameLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userValidationObjectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // firstNameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(552, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First name";
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.firstNameLabel.Location = new System.Drawing.Point(552, 132);
+            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(177, 39);
+            this.firstNameLabel.TabIndex = 0;
+            this.firstNameLabel.Text = "First name";
             // 
-            // label2
+            // emailLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(501, 117);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 39);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Second name";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailLabel.Location = new System.Drawing.Point(633, 267);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(103, 39);
+            this.emailLabel.TabIndex = 2;
+            this.emailLabel.Text = "Email";
             // 
-            // label3
+            // motherTownLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(633, 185);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 39);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Email";
+            this.motherTownLabel.AutoSize = true;
+            this.motherTownLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.motherTownLabel.Location = new System.Drawing.Point(533, 334);
+            this.motherTownLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.motherTownLabel.Name = "motherTownLabel";
+            this.motherTownLabel.Size = new System.Drawing.Size(194, 39);
+            this.motherTownLabel.TabIndex = 3;
+            this.motherTownLabel.Text = "Mothertown";
             // 
-            // label4
+            // birthDateLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(533, 252);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 39);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Mothertown";
+            this.birthDateLabel.AutoSize = true;
+            this.birthDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthDateLabel.Location = new System.Drawing.Point(568, 402);
+            this.birthDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.birthDateLabel.Name = "birthDateLabel";
+            this.birthDateLabel.Size = new System.Drawing.Size(162, 39);
+            this.birthDateLabel.TabIndex = 4;
+            this.birthDateLabel.Text = "Birth date";
             // 
-            // label5
+            // passwordLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(568, 320);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 39);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Birth date";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordLabel.Location = new System.Drawing.Point(563, 470);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(167, 39);
+            this.passwordLabel.TabIndex = 5;
+            this.passwordLabel.Text = "Password";
             // 
-            // label6
+            // signUpButton
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(563, 388);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 39);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Password";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(659, 554);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(389, 96);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sign Up";
-            this.button1.UseVisualStyleBackColor = false;
+            this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.signUpButton.FlatAppearance.BorderSize = 0;
+            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.signUpButton.ForeColor = System.Drawing.Color.White;
+            this.signUpButton.Location = new System.Drawing.Point(659, 617);
+            this.signUpButton.Margin = new System.Windows.Forms.Padding(4);
+            this.signUpButton.Name = "signUpButton";
+            this.signUpButton.Size = new System.Drawing.Size(389, 96);
+            this.signUpButton.TabIndex = 7;
+            this.signUpButton.Text = "Sign Up";
+            this.signUpButton.UseVisualStyleBackColor = false;
+            this.signUpButton.Click += new System.EventHandler(this.signUp_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.placeHolderTextBox6);
-            this.panel1.Controls.Add(this.placeHolderTextBox5);
-            this.panel1.Controls.Add(this.placeHolderTextBox4);
-            this.panel1.Controls.Add(this.placeHolderTextBox3);
-            this.panel1.Controls.Add(this.placeHolderTextBox2);
-            this.panel1.Controls.Add(this.placeHolderTextBox1);
-            this.panel1.Location = new System.Drawing.Point(805, 46);
+            this.panel1.Controls.Add(this.motherTown);
+            this.panel1.Controls.Add(this.firstName);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.birthDate);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.password);
+            this.panel1.Controls.Add(this.secondName);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Location = new System.Drawing.Point(773, 132);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(400, 380);
+            this.panel1.Size = new System.Drawing.Size(401, 380);
             this.panel1.TabIndex = 13;
             // 
-            // placeHolderTextBox6
+            // email
             // 
-            this.placeHolderTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.placeHolderTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.placeHolderTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.placeHolderTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.placeHolderTextBox6.Location = new System.Drawing.Point(0, 339);
-            this.placeHolderTextBox6.Multiline = true;
-            this.placeHolderTextBox6.Name = "placeHolderTextBox6";
-            this.placeHolderTextBox6.PasswordChar = '*';
-            this.placeHolderTextBox6.PlaceHolderText = "xxxxxxxxxx";
-            this.placeHolderTextBox6.Size = new System.Drawing.Size(400, 42);
-            this.placeHolderTextBox6.TabIndex = 16;
-            this.placeHolderTextBox6.Text = "xxxxxxxxxxxx";
+            this.email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "Email", true));
+            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.email.Location = new System.Drawing.Point(13, 0);
+            this.email.Multiline = true;
+            this.email.Name = "email";
+            this.email.PlaceHolderText = null;
+            this.email.Size = new System.Drawing.Size(388, 42);
+            this.email.TabIndex = 3;
             // 
-            // placeHolderTextBox5
+            // userValidationObjectBindingSource
             // 
-            this.placeHolderTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.placeHolderTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.placeHolderTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.placeHolderTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.placeHolderTextBox5.Location = new System.Drawing.Point(0, 271);
-            this.placeHolderTextBox5.Multiline = true;
-            this.placeHolderTextBox5.Name = "placeHolderTextBox5";
-            this.placeHolderTextBox5.PlaceHolderText = "11.09.2000";
-            this.placeHolderTextBox5.Size = new System.Drawing.Size(400, 42);
-            this.placeHolderTextBox5.TabIndex = 16;
-            this.placeHolderTextBox5.Text = "11.09.2000";
+            this.userValidationObjectBindingSource.DataSource = typeof(YoutubeProject.UserValidationObject);
             // 
-            // placeHolderTextBox4
+            // firstName
             // 
-            this.placeHolderTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.placeHolderTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.placeHolderTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.placeHolderTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.placeHolderTextBox4.Location = new System.Drawing.Point(0, 203);
-            this.placeHolderTextBox4.Multiline = true;
-            this.placeHolderTextBox4.Name = "placeHolderTextBox4";
-            this.placeHolderTextBox4.PlaceHolderText = "Kyiv City";
-            this.placeHolderTextBox4.Size = new System.Drawing.Size(400, 42);
-            this.placeHolderTextBox4.TabIndex = 16;
-            this.placeHolderTextBox4.Text = "Kyiv City";
+            this.firstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.firstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "FirstName", true));
+            this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.firstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.firstName.Location = new System.Drawing.Point(12, 0);
+            this.firstName.Multiline = true;
+            this.firstName.Name = "firstName";
+            this.firstName.PlaceHolderText = null;
+            this.firstName.Size = new System.Drawing.Size(388, 42);
+            this.firstName.TabIndex = 1;
             // 
-            // placeHolderTextBox3
+            // panel5
             // 
-            this.placeHolderTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.placeHolderTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.placeHolderTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.placeHolderTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.placeHolderTextBox3.Location = new System.Drawing.Point(0, 136);
-            this.placeHolderTextBox3.Multiline = true;
-            this.placeHolderTextBox3.Name = "placeHolderTextBox3";
-            this.placeHolderTextBox3.PlaceHolderText = "example@gmail.com";
-            this.placeHolderTextBox3.Size = new System.Drawing.Size(400, 42);
-            this.placeHolderTextBox3.TabIndex = 16;
-            this.placeHolderTextBox3.Text = "example@gmail.com";
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.panel5.Location = new System.Drawing.Point(0, 206);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 42);
+            this.panel5.TabIndex = 28;
             // 
-            // placeHolderTextBox2
+            // motherTown
             // 
-            this.placeHolderTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.placeHolderTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.placeHolderTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.placeHolderTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.placeHolderTextBox2.Location = new System.Drawing.Point(0, 68);
-            this.placeHolderTextBox2.Multiline = true;
-            this.placeHolderTextBox2.Name = "placeHolderTextBox2";
-            this.placeHolderTextBox2.PlaceHolderText = "Doe";
-            this.placeHolderTextBox2.Size = new System.Drawing.Size(400, 42);
-            this.placeHolderTextBox2.TabIndex = 16;
-            this.placeHolderTextBox2.Text = "Doe";
+            this.motherTown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.motherTown.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.motherTown.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "MotherTown", true));
+            this.motherTown.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.motherTown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.motherTown.Location = new System.Drawing.Point(13, 206);
+            this.motherTown.Multiline = true;
+            this.motherTown.Name = "motherTown";
+            this.motherTown.PlaceHolderText = null;
+            this.motherTown.Size = new System.Drawing.Size(388, 42);
+            this.motherTown.TabIndex = 4;
             // 
-            // placeHolderTextBox1
+            // birthDate
             // 
-            this.placeHolderTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.placeHolderTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.placeHolderTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.placeHolderTextBox1.Multiline = true;
-            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
-            this.placeHolderTextBox1.PlaceHolderText = "John";
-            this.placeHolderTextBox1.Size = new System.Drawing.Size(400, 42);
-            this.placeHolderTextBox1.TabIndex = 15;
-            this.placeHolderTextBox1.Text = "John";
+            this.birthDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.birthDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.birthDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "BirthDate", true));
+            this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.birthDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.birthDate.Location = new System.Drawing.Point(0, 274);
+            this.birthDate.Mask = "00/00/0000";
+            this.birthDate.Name = "birthDate";
+            this.birthDate.PlaceHolderText = null;
+            this.birthDate.Size = new System.Drawing.Size(400, 42);
+            this.birthDate.TabIndex = 5;
+            this.birthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.birthDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 42);
+            this.panel2.TabIndex = 26;
+            // 
+            // password
+            // 
+            this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "Password", true));
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.password.Location = new System.Drawing.Point(13, 338);
+            this.password.Multiline = true;
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.PlaceHolderText = null;
+            this.password.Size = new System.Drawing.Size(388, 42);
+            this.password.TabIndex = 6;
+            // 
+            // secondName
+            // 
+            this.secondName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.secondName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secondName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "SecondName", true));
+            this.secondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.secondName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.secondName.Location = new System.Drawing.Point(13, 66);
+            this.secondName.Multiline = true;
+            this.secondName.Name = "secondName";
+            this.secondName.PlaceHolderText = null;
+            this.secondName.Size = new System.Drawing.Size(388, 42);
+            this.secondName.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.panel6.Location = new System.Drawing.Point(0, 338);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 42);
+            this.panel6.TabIndex = 29;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.panel3.Location = new System.Drawing.Point(0, 66);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 42);
+            this.panel3.TabIndex = 27;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(DataAccess.Models.User);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.panel4.Controls.Add(this.email);
+            this.panel4.Location = new System.Drawing.Point(0, 135);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(401, 42);
+            this.panel4.TabIndex = 28;
+            // 
+            // exceptionLabel
+            // 
+            this.exceptionLabel.AutoSize = true;
+            this.exceptionLabel.ForeColor = System.Drawing.Color.Red;
+            this.exceptionLabel.Location = new System.Drawing.Point(807, 7);
+            this.exceptionLabel.Name = "exceptionLabel";
+            this.exceptionLabel.Size = new System.Drawing.Size(0, 17);
+            this.exceptionLabel.TabIndex = 15;
+            // 
+            // secondNameLabel
+            // 
+            this.secondNameLabel.AutoSize = true;
+            this.secondNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.secondNameLabel.Location = new System.Drawing.Point(501, 199);
+            this.secondNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.secondNameLabel.Name = "secondNameLabel";
+            this.secondNameLabel.Size = new System.Drawing.Size(227, 39);
+            this.secondNameLabel.TabIndex = 1;
+            this.secondNameLabel.Text = "Second name";
             // 
             // RegistrationControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.exceptionLabel);
+            this.Controls.Add(this.signUpButton);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.birthDateLabel);
+            this.Controls.Add(this.motherTownLabel);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.secondNameLabel);
+            this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistrationControl";
-            this.Size = new System.Drawing.Size(1707, 677);
+            this.Size = new System.Drawing.Size(1707, 748);
             this.Tag = "";
+            this.Load += new System.EventHandler(this.RegistrationControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userValidationObjectBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,19 +340,27 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label firstNameLabel;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label motherTownLabel;
+        private System.Windows.Forms.Label birthDateLabel;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Button signUpButton;
         private System.Windows.Forms.Panel panel1;
-        private PlaceHolderTextBox placeHolderTextBox1;
-        private PlaceHolderTextBox placeHolderTextBox5;
-        private PlaceHolderTextBox placeHolderTextBox4;
-        private PlaceHolderTextBox placeHolderTextBox3;
-        private PlaceHolderTextBox placeHolderTextBox2;
-        private PlaceHolderTextBox placeHolderTextBox6;
+        private System.Windows.Forms.Label exceptionLabel;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label secondNameLabel;
+        private System.Windows.Forms.BindingSource userValidationObjectBindingSource;
+        private DateBoxControl birthDate;
+        private PlaceHolderTextBox email;
+        private PlaceHolderTextBox firstName;
+        private PlaceHolderTextBox motherTown;
+        private PlaceHolderTextBox password;
+        private PlaceHolderTextBox secondName;
     }
 }

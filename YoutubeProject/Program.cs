@@ -14,14 +14,13 @@ namespace YoutubeProject
 {
     static class Program
     {
-        public static IServiceProvider ServiceProvider { get; set; }
+        public static ServiceProvider ServiceProvider { get; set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ConfigureServices();

@@ -31,9 +31,9 @@ namespace BusinessLogic.Security
             try
             {
                 #region CheckIfEmpty
-                if (user.Username == string.Empty || user.Username == null)
+                if (user.Email == string.Empty || user.Email == null)
                 {
-                    throw new ArgumentException($"{nameof(user)} has an empty {nameof(user.Username)}.");
+                    throw new ArgumentException($"{nameof(user)} has an empty {nameof(user.Email)}.");
                 }
                 if (user.Password == string.Empty || user.Password == null)
                 {
@@ -41,22 +41,26 @@ namespace BusinessLogic.Security
                 }
                 #endregion
                 var foundUser = await userContext.Users
-                    .FirstOrDefaultAsync(x => x.Username == user.Username);
+                    .FirstOrDefaultAsync(x => x.Email == user.Email);
 
-                if(foundUser == null)
+                if (foundUser == null)
                 {
-                    throw new BadLoginException($"{nameof(user)} with username {user.Username} does not exist");
+                    throw new BadLoginException($"{nameof(user)} with username {user.Email} does not exist");
                 }
 
-                if(foundUser.Password != user.Password)
+                if (foundUser.Password != user.Password)
                 {
                     throw new BadLoginException($"Wrong password.");
                 }
                 return new UserOpResult { User = foundUser, Exception = null };
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                return new UserOpResult { User = null, Exception = e };
+                return new UserOpResult
+                {
+                    User = null,
+                    Exception = e
+                };
             }
         }
 
@@ -65,16 +69,18 @@ namespace BusinessLogic.Security
             var userEntity = new User();
             try
             {
+                if (await userContext.Users.AnyAsync(x => x.Email == user.Email))
+                    throw new BadEmailException($"The user with email {user.Email} already exists.");
                 userEntity = mapper.Map<User>(user);
                 userContext.Users.Add(userEntity);
                 await userContext.SaveChangesAsync();
                 return new UserOpResult { User = userEntity, Exception = null };
             }
-            catch(SocketException) // костыль, связанный с реализацией сокетов в .NET Full Framework
+            catch (SocketException) // костыль, связанный с реализацией сокетов в .NET Full Framework
             {
                 return new UserOpResult { User = userEntity, Exception = null };
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return new UserOpResult { User = null, Exception = e };
             }

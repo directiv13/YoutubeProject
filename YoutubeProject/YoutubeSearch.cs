@@ -33,7 +33,7 @@ namespace YoutubeProject
                              .Where(n => n.Name == "script").ToList();
 
                 var engine = new Jurassic.ScriptEngine();
-                var result = engine.Evaluate("(function() { " + scriptTags[28].InnerText + " return ytInitialData; })()");
+                var result = engine.Evaluate("(function() { " + scriptTags[27].InnerText + " return ytInitialData; })()");
                 string json = JSONObject.Stringify(engine, result);
 
                 return json;

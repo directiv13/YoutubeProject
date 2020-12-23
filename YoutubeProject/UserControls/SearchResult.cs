@@ -117,6 +117,7 @@ namespace YoutubeProject
             if (youtubeVideos != null)
             {
                 FillForm();
+                this.Show();
                 this.BringToFront();
                 return true;
             }

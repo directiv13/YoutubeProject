@@ -32,7 +32,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.password = new YoutubeProject.PlaceHolderTextBox();
-            this.login = new YoutubeProject.PlaceHolderTextBox();
+            this.email = new YoutubeProject.PlaceHolderTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // logButton
@@ -43,13 +44,13 @@
             this.logButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.logButton.ForeColor = System.Drawing.Color.White;
             this.logButton.Location = new System.Drawing.Point(628, 410);
-            this.logButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logButton.Margin = new System.Windows.Forms.Padding(4);
             this.logButton.Name = "logButton";
             this.logButton.Size = new System.Drawing.Size(389, 96);
             this.logButton.TabIndex = 17;
             this.logButton.Text = "Log In";
             this.logButton.UseVisualStyleBackColor = false;
-            this.logButton.Click += new System.EventHandler(this.button1_Click);
+            this.logButton.Click += new System.EventHandler(this.logIn_Click);
             // 
             // label6
             // 
@@ -89,31 +90,41 @@
             this.password.TabIndex = 19;
             this.password.Text = "xxxxxxxxxxxxxx";
             // 
-            // login
+            // email
             // 
-            this.login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.login.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.login.Location = new System.Drawing.Point(775, 173);
-            this.login.Multiline = true;
-            this.login.Name = "login";
-            this.login.PlaceHolderText = "example@mail.com";
-            this.login.Size = new System.Drawing.Size(400, 42);
-            this.login.TabIndex = 18;
-            this.login.Text = "example@mail.com";
+            this.email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.email.Location = new System.Drawing.Point(775, 173);
+            this.email.Multiline = true;
+            this.email.Name = "email";
+            this.email.PlaceHolderText = "example@mail.com";
+            this.email.Size = new System.Drawing.Size(400, 42);
+            this.email.TabIndex = 18;
+            this.email.Text = "example@mail.com";
+            this.email.TextChanged += new System.EventHandler(this.login_Changed);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(772, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 20;
             // 
             // LogInControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.password);
-            this.Controls.Add(this.login);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.logButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LogInControl";
             this.Size = new System.Drawing.Size(1707, 677);
             this.ResumeLayout(false);
@@ -126,7 +137,8 @@
         private System.Windows.Forms.Button logButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private PlaceHolderTextBox login;
+        private PlaceHolderTextBox email;
         private PlaceHolderTextBox password;
+        private System.Windows.Forms.Label label1;
     }
 }
