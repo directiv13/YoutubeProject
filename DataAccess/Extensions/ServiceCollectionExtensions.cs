@@ -16,10 +16,10 @@ namespace DataAccess.Extensions
         {
             var client = new MongoClient(options.ConnectionString);
             var database = client.GetDatabase(options.DatabaseName);
-            var downloads = database.GetCollection<YtHistoryItem>(options.DownloadHistoryCollectionName);
-            var searches = database.GetCollection<YtHistoryItem>(options.SearchHistoryCollectionName);
-            var downloadsDbContext = new YtHistoryContext(downloads);
-            var searchesDbContext = new YtHistoryContext(searches);
+            var downloads = database.GetCollection<DownloadsHistoryItem>(options.DownloadHistoryCollectionName);
+            var searches = database.GetCollection<SearchHistoryItem>(options.SearchHistoryCollectionName);
+            var downloadsDbContext = new DownloadsHistoryContext(downloads);
+            var searchesDbContext = new SearchesHistoryContext(searches);
 
             serviceCollection.AddSingleton<IDownloadsHistoryContext>(downloadsDbContext);
             serviceCollection.AddSingleton<ISearchHistoryContext>(searchesDbContext);

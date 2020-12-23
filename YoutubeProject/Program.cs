@@ -7,6 +7,8 @@ using BusinessLogic.AutoMapper.Extensions;
 using DataAccess.Contexts;
 using System.Configuration;
 using DataAccess.Extensions;
+using System.Linq;
+using DataAccess.Models;
 
 namespace YoutubeProject
 {
@@ -23,6 +25,19 @@ namespace YoutubeProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ConfigureServices();
+            var mongoSearchDbService = ServiceProvider.GetService<ISearchHistoryContext>();
+            var mongoDownloadsDbService = ServiceProvider.GetService<IDownloadsHistoryContext>();
+            mongoSearchDbService.Create(new SearchHistoryItem
+            {
+                UserId = 1,
+                SearchTerm = "hello world"
+            });
+            mongoDownloadsDbService.Create(new DownloadsHistoryItem
+            {
+                UserId = 2,
+                Uri = new Uri("https://google.com")
+            });
+
             Application.Run(new EnterForm());
         }
 
