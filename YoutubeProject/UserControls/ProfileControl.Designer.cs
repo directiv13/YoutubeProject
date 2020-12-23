@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileControl));
             this.signUpButton = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
@@ -37,25 +38,28 @@
             this.secondNameLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.motherTown = new YoutubeProject.PlaceHolderTextBox();
-            this.firstName = new YoutubeProject.PlaceHolderTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.birthDate = new YoutubeProject.DateBoxControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.password = new YoutubeProject.PlaceHolderTextBox();
-            this.secondName = new YoutubeProject.PlaceHolderTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.email = new YoutubeProject.PlaceHolderTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.userValidationObjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.birthDate = new YoutubeProject.DateBoxControl();
+            this.email = new YoutubeProject.PlaceHolderTextBox();
+            this.firstName = new YoutubeProject.PlaceHolderTextBox();
+            this.motherTown = new YoutubeProject.PlaceHolderTextBox();
+            this.password = new YoutubeProject.PlaceHolderTextBox();
+            this.secondName = new YoutubeProject.PlaceHolderTextBox();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userValidationObjectBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // signUpButton
@@ -72,6 +76,7 @@
             this.signUpButton.TabIndex = 20;
             this.signUpButton.Text = "Done";
             this.signUpButton.UseVisualStyleBackColor = false;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // passwordLabel
             // 
@@ -141,13 +146,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.motherTown);
-            this.panel1.Controls.Add(this.firstName);
-            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.birthDate);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.password);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.secondName);
+            this.panel1.Controls.Add(this.password);
+            this.panel1.Controls.Add(this.firstName);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel4);
@@ -158,58 +162,15 @@
             this.panel1.Size = new System.Drawing.Size(401, 380);
             this.panel1.TabIndex = 21;
             // 
-            // motherTown
-            // 
-            this.motherTown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.motherTown.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.motherTown.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.motherTown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.motherTown.Location = new System.Drawing.Point(13, 206);
-            this.motherTown.Multiline = true;
-            this.motherTown.Name = "motherTown";
-            this.motherTown.PlaceHolderText = null;
-            this.motherTown.ReadOnly = true;
-            this.motherTown.Size = new System.Drawing.Size(388, 42);
-            this.motherTown.TabIndex = 4;
-            // 
-            // firstName
-            // 
-            this.firstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.firstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.firstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.firstName.Location = new System.Drawing.Point(12, 0);
-            this.firstName.Multiline = true;
-            this.firstName.Name = "firstName";
-            this.firstName.PlaceHolderText = null;
-            this.firstName.ReadOnly = true;
-            this.firstName.Size = new System.Drawing.Size(389, 42);
-            this.firstName.TabIndex = 1;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.panel5.Controls.Add(this.motherTown);
             this.panel5.Location = new System.Drawing.Point(0, 206);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 42);
+            this.panel5.Size = new System.Drawing.Size(402, 42);
             this.panel5.TabIndex = 28;
-            // 
-            // birthDate
-            // 
-            this.birthDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.birthDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
-            this.birthDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.birthDate.Location = new System.Drawing.Point(0, 274);
-            this.birthDate.Mask = "00/00/0000";
-            this.birthDate.Name = "birthDate";
-            this.birthDate.PlaceHolderText = null;
-            this.birthDate.ReadOnly = true;
-            this.birthDate.Size = new System.Drawing.Size(402, 42);
-            this.birthDate.TabIndex = 5;
-            this.birthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.birthDate.ValidatingType = typeof(System.DateTime);
             // 
             // panel2
             // 
@@ -219,35 +180,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 42);
             this.panel2.TabIndex = 26;
-            // 
-            // password
-            // 
-            this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.password.Location = new System.Drawing.Point(13, 338);
-            this.password.Multiline = true;
-            this.password.Name = "password";
-            this.password.PasswordChar = '*';
-            this.password.PlaceHolderText = null;
-            this.password.ReadOnly = true;
-            this.password.Size = new System.Drawing.Size(388, 42);
-            this.password.TabIndex = 6;
-            // 
-            // secondName
-            // 
-            this.secondName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.secondName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.secondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.secondName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.secondName.Location = new System.Drawing.Point(13, 66);
-            this.secondName.Multiline = true;
-            this.secondName.Name = "secondName";
-            this.secondName.PlaceHolderText = null;
-            this.secondName.ReadOnly = true;
-            this.secondName.Size = new System.Drawing.Size(388, 42);
-            this.secondName.TabIndex = 2;
             // 
             // panel6
             // 
@@ -276,20 +208,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(401, 42);
             this.panel4.TabIndex = 28;
-            // 
-            // email
-            // 
-            this.email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
-            this.email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.email.Location = new System.Drawing.Point(13, 0);
-            this.email.Multiline = true;
-            this.email.Name = "email";
-            this.email.PlaceHolderText = null;
-            this.email.ReadOnly = true;
-            this.email.Size = new System.Drawing.Size(388, 42);
-            this.email.TabIndex = 3;
             // 
             // button2
             // 
@@ -329,7 +247,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(1064, 255);
+            this.button5.Location = new System.Drawing.Point(1064, 253);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(38, 41);
             this.button5.TabIndex = 26;
@@ -357,6 +275,102 @@
             this.button7.TabIndex = 28;
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // userValidationObjectBindingSource
+            // 
+            this.userValidationObjectBindingSource.DataSource = typeof(YoutubeProject.UserValidationObject);
+            // 
+            // birthDate
+            // 
+            this.birthDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.birthDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.birthDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "BirthDate", true));
+            this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.birthDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.birthDate.Location = new System.Drawing.Point(0, 270);
+            this.birthDate.Mask = "00/00/0000";
+            this.birthDate.Name = "birthDate";
+            this.birthDate.PlaceHolderText = null;
+            this.birthDate.ReadOnly = true;
+            this.birthDate.Size = new System.Drawing.Size(401, 42);
+            this.birthDate.TabIndex = 30;
+            this.birthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.birthDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // email
+            // 
+            this.email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "Email", true));
+            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.email.Location = new System.Drawing.Point(13, 0);
+            this.email.Multiline = true;
+            this.email.Name = "email";
+            this.email.PlaceHolderText = null;
+            this.email.ReadOnly = true;
+            this.email.Size = new System.Drawing.Size(388, 42);
+            this.email.TabIndex = 32;
+            // 
+            // firstName
+            // 
+            this.firstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.firstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "FirstName", true));
+            this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.firstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.firstName.Location = new System.Drawing.Point(14, 0);
+            this.firstName.Multiline = true;
+            this.firstName.Name = "firstName";
+            this.firstName.PlaceHolderText = null;
+            this.firstName.ReadOnly = true;
+            this.firstName.Size = new System.Drawing.Size(388, 42);
+            this.firstName.TabIndex = 34;
+            // 
+            // motherTown
+            // 
+            this.motherTown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.motherTown.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.motherTown.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "MotherTown", true));
+            this.motherTown.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.motherTown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.motherTown.Location = new System.Drawing.Point(14, 0);
+            this.motherTown.Multiline = true;
+            this.motherTown.Name = "motherTown";
+            this.motherTown.PlaceHolderText = null;
+            this.motherTown.ReadOnly = true;
+            this.motherTown.Size = new System.Drawing.Size(388, 42);
+            this.motherTown.TabIndex = 36;
+            // 
+            // password
+            // 
+            this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "Password", true));
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.password.Location = new System.Drawing.Point(14, 338);
+            this.password.Multiline = true;
+            this.password.Name = "password";
+            this.password.PlaceHolderText = null;
+            this.password.ReadOnly = true;
+            this.password.Size = new System.Drawing.Size(388, 42);
+            this.password.TabIndex = 38;
+            // 
+            // secondName
+            // 
+            this.secondName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(197)))), ((int)(((byte)(209)))));
+            this.secondName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secondName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userValidationObjectBindingSource, "SecondName", true));
+            this.secondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.secondName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.secondName.Location = new System.Drawing.Point(14, 66);
+            this.secondName.Multiline = true;
+            this.secondName.Name = "secondName";
+            this.secondName.PlaceHolderText = null;
+            this.secondName.ReadOnly = true;
+            this.secondName.Size = new System.Drawing.Size(388, 42);
+            this.secondName.TabIndex = 40;
+            // 
             // ProfileControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -380,8 +394,11 @@
             this.Size = new System.Drawing.Size(1444, 673);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userValidationObjectBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,22 +414,23 @@
         private System.Windows.Forms.Label secondNameLabel;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Panel panel1;
-        private PlaceHolderTextBox motherTown;
-        private PlaceHolderTextBox firstName;
         private System.Windows.Forms.Panel panel5;
-        private DateBoxControl birthDate;
         private System.Windows.Forms.Panel panel2;
-        private PlaceHolderTextBox password;
-        private PlaceHolderTextBox secondName;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private PlaceHolderTextBox email;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private DateBoxControl birthDate;
+        private System.Windows.Forms.BindingSource userValidationObjectBindingSource;
+        private PlaceHolderTextBox motherTown;
+        private PlaceHolderTextBox secondName;
+        private PlaceHolderTextBox password;
+        private PlaceHolderTextBox firstName;
+        private PlaceHolderTextBox email;
     }
 }

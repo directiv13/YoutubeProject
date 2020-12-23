@@ -51,7 +51,7 @@ namespace YoutubeProject
         /// <summary>
         /// CheckBox checker
         /// </summary>
-        private bool IsChecked = false;
+        public bool IsChecked = false;
         #endregion
 
         #region Attributes

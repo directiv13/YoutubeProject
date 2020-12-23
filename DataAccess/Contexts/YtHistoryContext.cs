@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Contexts
 {
-    class YtHistoryContext : IDownloadsHistoryContext, ISearchHistoryContext
+    public class YtHistoryContext : IDownloadsHistoryContext, ISearchHistoryContext
     {
         private readonly IMongoCollection<YtHistoryItem> historyCollection;
 

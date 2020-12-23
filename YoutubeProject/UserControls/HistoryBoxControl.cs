@@ -15,16 +15,26 @@ namespace YoutubeProject
         private string CheckBoxTextValue;
         public string CheckBoxText
         {
-            get { return CheckBoxTextValue; }
+            get { return customCheckBox1.CheckBoxText; }
             set
             {
-                CheckBoxTextValue = value;
-                customCheckBox1.CheckBoxText = CheckBoxTextValue;
+                customCheckBox1.CheckBoxText = value;
+            }
+        }
+        public bool IsChecked { 
+            get
+            {
+                return customCheckBox1.IsChecked;
+            }
+            set
+            {
+                customCheckBox1.IsChecked = value;
             }
         }
         public HistoryBoxControl()
         {
             InitializeComponent();
         }
+
     }
 }

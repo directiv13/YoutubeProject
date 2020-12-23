@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess.Contexts;
 
 namespace YoutubeProject
 {
@@ -21,6 +22,7 @@ namespace YoutubeProject
         {
             searchResult1.Visible = false;
             historyControl1.Visible = false;
+            profileControl1.Visible = false;
         }
 
         private void Mouse_Enter(object sender, EventArgs e)
@@ -76,6 +78,11 @@ namespace YoutubeProject
         private void HideAll()
         {
 
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            profileControl1.Visible = true;
         }
     }
 }
