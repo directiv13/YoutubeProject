@@ -3,16 +3,17 @@ using System.Collections.Generic;
 
 namespace DataAccess.Contexts
 {
-    public interface IBaseYtContext
+    public interface IBaseYtContext <T>
+        where T: YtHistoryItemBase
     {
-        List<YtHistoryItem> Get();
-        YtHistoryItem Get(string id);
+        List<T> Get();
+        T Get(string id);
 
-        YtHistoryItem Create(YtHistoryItem item);
+        T Create(T item);
 
-        void Update(string id, YtHistoryItem item);
+        void Update(string id, T item);
 
-        void Remove(YtHistoryItem item);
+        void Remove(T item);
 
         void Remove(string id);
     }

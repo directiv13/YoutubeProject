@@ -10,31 +10,31 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Contexts
 {
-    public class YtHistoryContext : IDownloadsHistoryContext, ISearchHistoryContext
+    class DownloadsHistoryContext : IDownloadsHistoryContext
     {
-        private readonly IMongoCollection<YtHistoryItem> historyCollection;
+        private readonly IMongoCollection<DownloadsHistoryItem> historyCollection;
 
-        public YtHistoryContext(IMongoCollection<YtHistoryItem> historyCollection)
+        public DownloadsHistoryContext(IMongoCollection<DownloadsHistoryItem> historyCollection)
         {
             this.historyCollection = historyCollection;
         }
 
-        public List<YtHistoryItem> Get() =>
+        public List<DownloadsHistoryItem> Get() =>
             historyCollection.Find(item => true).ToList();
 
-        public YtHistoryItem Get(string id) =>
+        public DownloadsHistoryItem Get(string id) =>
             historyCollection.Find(item => item.Id == id).FirstOrDefault();
 
-        public YtHistoryItem Create(YtHistoryItem item)
+        public DownloadsHistoryItem Create(DownloadsHistoryItem item)
         {
             historyCollection.InsertOne(item);
             return item;
         }
 
-        public void Update(string id, YtHistoryItem item) =>
+        public void Update(string id, DownloadsHistoryItem item) =>
             historyCollection.ReplaceOne(x => x.Id == id, item);
 
-        public void Remove(YtHistoryItem item) =>
+        public void Remove(DownloadsHistoryItem item) =>
             historyCollection.DeleteOne(x => x.Id == item.Id);
 
         public void Remove(string id) =>
