@@ -12,7 +12,6 @@ namespace YoutubeProject
 {
     public partial class HistoryBoxControl : UserControl
     {
-        private string CheckBoxTextValue;
         public string CheckBoxText
         {
             get { return customCheckBox1.CheckBoxText; }

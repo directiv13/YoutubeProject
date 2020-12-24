@@ -7,6 +7,7 @@ namespace DataAccess.Contexts
         where T: YtHistoryItemBase
     {
         List<T> Get();
+        List<T> Get(int userID);
         T Get(string id);
 
         T Create(T item);

@@ -11,36 +11,43 @@ using System.Windows.Forms;
 
 namespace YoutubeProject
 {
-    public partial class HistoryControl : UserControl
+    public partial class HistoryUserControl : UserControl
     {
         private int UserID { get; set; }
         private List<SearchHistoryItem> SearchHistoryCollection { get; set; }
         private Point NextItemPosition = new Point(0, 0);
         private int ItemPositionStep = 70;
-        public HistoryControl()
-        { 
-            InitializeComponent(); 
+        public HistoryUserControl()
+        {
+            InitializeComponent();
         }
-        /*public HistoryControl(int userID)
+        public HistoryUserControl(int userID)
         {
             UserID = userID;
             InitializeComponent();
-        }*/
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
-        private void customCheckBox1_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void HistoryControl_Load(object sender, EventArgs e)
+        private void HistoryUserControl_Load(object sender, EventArgs e)
         {
             LoadHistory();
         }
-        private void label1_Click(object sender, EventArgs e)
+        private void LoadHistory()
         {
+            ReturnDefault();
 
+            SearchHistoryCollection = Program.Adapter.GetSearchHistory(UserID);
+            foreach (var item in SearchHistoryCollection)
+            {
+                AddHistoryBoxControl(item.SearchTerm);
+            }
+        }
+        private void ReturnDefault()
+        {
+            if (SearchHistoryCollection != null)
+                SearchHistoryCollection.Clear();
+            panel2.Controls.Clear();
+            panel2.Height = 0;
+            NextItemPosition = new Point(0, 0);
         }
         private void AddHistoryBoxControl(string text)
         {
@@ -52,24 +59,6 @@ namespace YoutubeProject
             });
 
             NextItemPosition.Y += ItemPositionStep;
-        }
-        private void LoadHistory()
-        {
-            ReturnDefault();
-
-            SearchHistoryCollection = Program.Adapter.GetSearchHistory(5);
-            foreach (var item in SearchHistoryCollection)
-            {
-                AddHistoryBoxControl(item.SearchTerm);
-            }
-        }
-        private void HistoryControl_VisibleChanged(object sender, EventArgs e)
-        {
-            if (Visible)
-            {
-                LoadHistory();
-                return;
-            }
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -83,13 +72,14 @@ namespace YoutubeProject
             }
             LoadHistory();
         }
-        private void ReturnDefault()
+
+        private void HistoryUserControl_VisibleChanged(object sender, EventArgs e)
         {
-            if (SearchHistoryCollection != null)
-                SearchHistoryCollection.Clear();
-            panel2.Controls.Clear();
-            panel2.Height = 0;
-            NextItemPosition = new Point(0, 0);
+            if (Visible)
+            {
+                LoadHistory();
+                return;
+            }
         }
     }
 }

@@ -1,9 +1,12 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using DataAccess.Contexts;
+using DataAccess.Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace YoutubeProject
 {
@@ -46,6 +49,24 @@ namespace YoutubeProject
 
             return result;
         }
-        
+        public void AddSearchRequestDb(int userID,string request)
+        {
+            var mongoSearchDbService = Program.ServiceProvider.GetService<ISearchHistoryContext>();
+            mongoSearchDbService.Create(new SearchHistoryItem
+            {
+                UserId = userID,
+                SearchTerm = request
+            });
+        }
+        public List<SearchHistoryItem> GetSearchHistory(int userID)
+        {
+            var mongoSearchDbService = Program.ServiceProvider.GetService<ISearchHistoryContext>();
+            return mongoSearchDbService.Get(userID);
+        }
+        public void DeleteItem(string id)
+        {
+            var mongoSearchDbService = Program.ServiceProvider.GetService<ISearchHistoryContext>();
+            mongoSearchDbService.Remove(id);
+        }
     }
 }

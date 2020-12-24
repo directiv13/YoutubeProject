@@ -169,10 +169,6 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\DownloadsHistoryItem.cs" />
     <Compile Include="Models\YtHistoryItemBase.cs" />
-    <Compile Include="Models\UserInfo.cs" />
-    <Compile Include="Models\YtDownloadInfo.cs" />
-    <Compile Include="Models\YtHistoryItem.cs" />
-    <Compile Include="Models\YtSearchInfo.cs" />
     <Compile Include="MongoDbOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contexts\UserContext.cs" />

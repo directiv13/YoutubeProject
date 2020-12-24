@@ -15,6 +15,7 @@ namespace YoutubeProject
     static class Program
     {
         public static ServiceProvider ServiceProvider { get; set; }
+        public static UIAdapter Adapter { get; set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -23,19 +24,9 @@ namespace YoutubeProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Initialize();
             ConfigureServices();
-            var mongoSearchDbService = ServiceProvider.GetService<ISearchHistoryContext>();
-            var mongoDownloadsDbService = ServiceProvider.GetService<IDownloadsHistoryContext>();
-            mongoSearchDbService.Create(new SearchHistoryItem
-            {
-                UserId = 1,
-                SearchTerm = "hello world"
-            });
-            mongoDownloadsDbService.Create(new DownloadsHistoryItem
-            {
-                UserId = 2,
-                Uri = new Uri("https://google.com")
-            });
+
 
             Application.Run(new EnterForm());
         }
@@ -63,6 +54,11 @@ namespace YoutubeProject
             services.AddTransient<IUserManager, UserManager>();
             services.AddCustomAutoMapper();
             ServiceProvider = services.BuildServiceProvider();
+        }
+
+        private static void Initialize()
+        {
+            Adapter = new UIAdapter(new YoutubeSearch());
         }
     }
 }

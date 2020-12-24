@@ -26,36 +26,6 @@ namespace YoutubeProject
         {
             this.VideoID = videoID;
         }
-        public void Download(DownloadingFormat format, string folderPath)
-        {
-            try
-            {
-                /*var youtube = YouTube.Default;
-                var video = await youtube.GetVideoAsync("https://wwww.youtube.com/watch?v=" + VideoID);
-                switch (format)
-                {
-                    case DownloadingFormat.MP3:
-                        File.WriteAllBytes(folderPath + @"\" + video.Title + ".mp3", await video.GetBytesAsync());
-                        MessageBox.Show("READY");
-                        break;
-                    case DownloadingFormat.MP4:
-                        File.WriteAllBytes(folderPath + @"\" + video.Title + ".mp4", await video.GetBytesAsync());
-                        break;
-                    default:
-                        break;
-                }*/
-
-                var youtubeVideo = new YoutubeClient();
-                var streamManifest = 
-
-                MessageBox.Show("Download complete!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-        }
         public async Task DownloadAsync(DownloadingFormat downloadinfFormat, string folderPath)
         {
             var youtube = new YoutubeClient();

@@ -22,6 +22,9 @@ namespace DataAccess.Contexts
         public List<DownloadsHistoryItem> Get() =>
             historyCollection.Find(item => true).ToList();
 
+        public List<DownloadsHistoryItem> Get(int userID) =>
+            historyCollection.Find(item => item.UserId == userID).ToList();
+
         public DownloadsHistoryItem Get(string id) =>
             historyCollection.Find(item => item.Id == id).FirstOrDefault();
 

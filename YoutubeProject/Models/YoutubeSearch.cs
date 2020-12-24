@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace YoutubeProject
 {
-    class YoutubeSearch:IScrapper
+    public class YoutubeSearch:IScrapper
     {
         public string GetSearchResult(string searchRequest)
         {

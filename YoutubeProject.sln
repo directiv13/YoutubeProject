@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{5FA0542E-7F50-40C2-996B-E8E84CAB7DBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryList", "HistoryList\HistoryList.csproj", "{BA7722BD-4D0C-4464-9F70-23307B5ACACA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeProject.Test", "YoutubeProject.Test\YoutubeProject.Test.csproj", "{A1417D33-1F4B-4BD7-8605-21772D1F40C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{5FA0542E-7F50-40C2-996B-E8E84CAB7DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FA0542E-7F50-40C2-996B-E8E84CAB7DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FA0542E-7F50-40C2-996B-E8E84CAB7DBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA7722BD-4D0C-4464-9F70-23307B5ACACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA7722BD-4D0C-4464-9F70-23307B5ACACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA7722BD-4D0C-4464-9F70-23307B5ACACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA7722BD-4D0C-4464-9F70-23307B5ACACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1417D33-1F4B-4BD7-8605-21772D1F40C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1417D33-1F4B-4BD7-8605-21772D1F40C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1417D33-1F4B-4BD7-8605-21772D1F40C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1417D33-1F4B-4BD7-8605-21772D1F40C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

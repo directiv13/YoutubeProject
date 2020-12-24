@@ -253,8 +253,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HistoryList.cs" />
-    <Compile Include="HistoryListItem.cs" />
+    <Compile Include="HistoryUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HistoryUserControl.Designer.cs">
+      <DependentUpon>HistoryUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HistoryBoxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -285,7 +289,7 @@
     <Compile Include="Forms\EnterForm.Designer.cs">
       <DependentUpon>EnterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IScrapper.cs" />
+    <Compile Include="Models\IScrapper.cs" />
     <Compile Include="Forms\MediaPlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,21 +323,24 @@
     <Compile Include="UserControls\SearchResult.Designer.cs">
       <DependentUpon>SearchResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIAdapter.cs" />
+    <Compile Include="Models\UIAdapter.cs" />
     <Compile Include="Forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="YoutubeSearch.cs" />
-    <Compile Include="YoutubeVideo.cs" />
-    <Compile Include="YoutubeVideoBuilder.cs" />
+    <Compile Include="Models\YoutubeSearch.cs" />
+    <Compile Include="Models\YoutubeVideo.cs" />
+    <Compile Include="Models\YoutubeVideoBuilder.cs" />
     <EmbeddedResource Include="Forms\EnterForm.resx">
       <DependentUpon>EnterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MediaPlayerForm.resx">
       <DependentUpon>MediaPlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryUserControl.resx">
+      <DependentUpon>HistoryUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HistoryBoxControl.resx">
       <DependentUpon>HistoryBoxControl.cs</DependentUpon>

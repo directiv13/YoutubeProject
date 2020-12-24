@@ -25,6 +25,9 @@ namespace DataAccess.Contexts
         public SearchHistoryItem Get(string id) =>
             historyCollection.Find(item => item.Id == id).FirstOrDefault();
 
+        public List<SearchHistoryItem> Get(int userID) =>
+            historyCollection.Find(item => item.UserId == userID).ToList();
+
         public SearchHistoryItem Create(SearchHistoryItem item)
         {
             historyCollection.InsertOne(item);

@@ -8,20 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess.Contexts;
+using DataAccess.Models;
 
 namespace YoutubeProject
 {
     public partial class UserForm : Form
     {
-        public UserForm()
+        User user;
+        public UserForm(User user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
         private void UserForm_Load(object sender, EventArgs e)
         {
             searchResult1.Visible = false;
-            historyControl1.Visible = false;
+            historyUserControl1.Visible = false;
             profileControl1.Visible = false;
         }
 
@@ -44,17 +47,22 @@ namespace YoutubeProject
         {
 
         }
-
         private async void searchButton_Click(object sender, EventArgs e)
         {
             searchResult1.SearchRequest = searchText.Text;
+
+            if (!string.IsNullOrEmpty(searchText.Text))
+                Program.Adapter.AddSearchRequestDb(user.UserId, searchText.Text);
 
             if (!await searchResult1.GetYoutubeVideos())
             {
                 infoTextBox.Text = "Invalid search query. =(";
             }
-        }
 
+            historyUserControl1.Visible = false;
+            profileControl1.Visible = false;
+            searchResult1.Visible = true;
+        }
         private void searchText_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -64,22 +72,16 @@ namespace YoutubeProject
                     break;
             }
         }
-
         private void collapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void historyButton_Click(object sender, EventArgs e)
         {
-            historyControl1.Visible = true;
+            historyUserControl1.Visible = true;
+            searchResult1.Visible = false;
+            profileControl1.Visible = false;
         }
-
-        private void HideAll()
-        {
-
-        }
-
         private void profileButton_Click(object sender, EventArgs e)
         {
             profileControl1.Visible = true;

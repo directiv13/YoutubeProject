@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace YoutubeProject
 {
-    class YoutubeVideoBuilder
+    public class YoutubeVideoBuilder
     {
         JToken contents;
 
@@ -55,6 +55,7 @@ namespace YoutubeProject
             this.viewCount = contents.SelectToken("$.videoRenderer.shortViewCountText.simpleText").Value<string>();
             this.channelName = contents.SelectToken("$.videoRenderer.ownerText.runs[0].text").Value<string>();
             this.publishedTime = contents.SelectToken("$.videoRenderer.publishedTimeText.simpleText").Value<string>();
+            
             //Переходимо до наступного відео у пошуку
             NextVideo();
             return new YoutubeVideo(videoID)

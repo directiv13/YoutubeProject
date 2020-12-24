@@ -41,7 +41,7 @@ namespace YoutubeProject
             var userManager = Program.ServiceProvider.GetService<IUserManager>();
             using (userManager)
             {
-                var user = await userManager.TrySignUpAsync(new BusinessLogic.Models.CreateUserDto()
+                var userResult = await userManager.TrySignUpAsync(new BusinessLogic.Models.CreateUserDto()
                 {
                     FirstName = firstName.Text,
                     SecondName = secondName.Text,
@@ -50,15 +50,17 @@ namespace YoutubeProject
                     BirthDate = (DateTime)birthDate.ValidateText(),
                     Password = password.Text
                 });
-                if (user.User != null)
+                if (userResult.User != null)
                 {
-                    UserForm userForm = new UserForm();
-                    this.ParentForm.Hide();
-                    userForm.Show();
+                    using (UserForm userForm = new UserForm(userResult.User))
+                    {
+                        this.ParentForm.Hide();
+                        userForm.Show();
+                    }
                 }
-                else if (user.Exception != null)
+                else if (userResult.Exception != null)
                 {
-                    exceptionLabel.Text = user.Exception.Message;
+                    exceptionLabel.Text = userResult.Exception.Message;
                 }
             }
         }

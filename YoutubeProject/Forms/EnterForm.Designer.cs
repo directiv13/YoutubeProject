@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.closeButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 35);
             this.panel1.TabIndex = 0;
@@ -61,11 +61,12 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.Location = new System.Drawing.Point(1165, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // closeButton
             // 
@@ -73,7 +74,7 @@
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeButton.Image = ((System.Drawing.Image)(resources.GetObject("closeButton.Image")));
             this.closeButton.Location = new System.Drawing.Point(1225, 7);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(20, 20);
             this.closeButton.TabIndex = 1;
@@ -84,7 +85,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(35, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(390, 80);
             this.pictureBox1.TabIndex = 5;
@@ -98,7 +99,7 @@
             this.logButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.logButton.ForeColor = System.Drawing.Color.White;
             this.logButton.Location = new System.Drawing.Point(494, 439);
-            this.logButton.Margin = new System.Windows.Forms.Padding(2);
+            this.logButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logButton.Name = "logButton";
             this.logButton.Size = new System.Drawing.Size(292, 78);
             this.logButton.TabIndex = 8;
@@ -116,7 +117,7 @@
             this.regButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.regButton.ForeColor = System.Drawing.Color.White;
             this.regButton.Location = new System.Drawing.Point(494, 326);
-            this.regButton.Margin = new System.Windows.Forms.Padding(2);
+            this.regButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.regButton.Name = "regButton";
             this.regButton.Size = new System.Drawing.Size(292, 78);
             this.regButton.TabIndex = 7;
@@ -130,7 +131,7 @@
             // 
             this.registrationControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.registrationControl1.Location = new System.Drawing.Point(0, 133);
-            this.registrationControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.registrationControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.registrationControl1.Name = "registrationControl1";
             this.registrationControl1.Size = new System.Drawing.Size(1280, 573);
             this.registrationControl1.TabIndex = 9;
@@ -140,7 +141,7 @@
             // 
             this.logInControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.logInControl1.Location = new System.Drawing.Point(0, 170);
-            this.logInControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.logInControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logInControl1.Name = "logInControl1";
             this.logInControl1.Size = new System.Drawing.Size(1280, 550);
             this.logInControl1.TabIndex = 10;
@@ -160,7 +161,7 @@
             this.Controls.Add(this.registrationControl1);
             this.Controls.Add(this.logInControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EnterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

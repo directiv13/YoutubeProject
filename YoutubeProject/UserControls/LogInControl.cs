@@ -33,20 +33,20 @@ namespace YoutubeProject
         {
             using (var userManager = Program.ServiceProvider.GetService<IUserManager>())
             {
-                var user = await userManager.TryLoginAsync(new BusinessLogic.Models.LoginUserDto()
+                var userResult = await userManager.TryLoginAsync(new BusinessLogic.Models.LoginUserDto()
                 {
                     Email = email.Text,
                     Password = password.Text
                 });
-                if (user.User != null)
+                if (userResult.User != null)
                 {
-                    UserForm userForm = new UserForm();
+                    UserForm userForm = new UserForm(userResult.User);
                     this.ParentForm.Hide();
                     userForm.Show();
                 }
-                else if (user.Exception != null)
+                else if (userResult.Exception != null)
                 {
-                    label1.Text = user.Exception.Message;
+                    label1.Text = userResult.Exception.Message;
                 }
             }
         }

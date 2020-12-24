@@ -37,9 +37,10 @@ namespace YoutubeProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Location = new System.Drawing.Point(0, 69);
+            this.panel1.Location = new System.Drawing.Point(0, 85);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1013, 1);
+            this.panel1.Size = new System.Drawing.Size(1351, 1);
             this.panel1.TabIndex = 0;
             // 
             // customCheckBox1
@@ -61,20 +62,23 @@ namespace YoutubeProject
             this.customCheckBox1.CheckBoxImageWidth = 100;
             this.customCheckBox1.CheckBoxSize = 25;
             this.customCheckBox1.CheckBoxText = "Max Korzh";
-            this.customCheckBox1.Location = new System.Drawing.Point(24, 0);
+            this.customCheckBox1.IsChecked = false;
+            this.customCheckBox1.Location = new System.Drawing.Point(32, 0);
+            this.customCheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.customCheckBox1.Name = "customCheckBox1";
-            this.customCheckBox1.Size = new System.Drawing.Size(989, 66);
+            this.customCheckBox1.Size = new System.Drawing.Size(1319, 81);
             this.customCheckBox1.TabIndex = 2;
             this.customCheckBox1.Text = "customCheckBox1";
             // 
             // HistoryBoxControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.customCheckBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HistoryBoxControl";
-            this.Size = new System.Drawing.Size(1066, 72);
+            this.Size = new System.Drawing.Size(1421, 89);
             this.ResumeLayout(false);
 
         }
